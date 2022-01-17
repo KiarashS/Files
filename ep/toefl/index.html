@@ -49,16 +49,13 @@ See https://github.com/adobe-type-tools/cmap-resources
 <!-- <script>
   pdfjsLib.GlobalWorkerOptions.workerSrc = '../../build/pdf.worker.js';
 </script> -->
-<script>
-  window.PDFViewerApplication.baseUrl = '../../assets/action-verbs.pdf';
-</script>
 
   <script src="/web/viewer.js"></script>
   <!--script src="{% static 'js/pdf/svg/svg.min.js' %}"></!--script-->
 
-  <script>
+  <!-- <script>
     window.PDFViewerApplication.baseUrl = '../../assets/action-verbs.pdf';
-  </script>
+  </script> -->
 
   </head>
 
@@ -419,5 +416,10 @@ See https://github.com/adobe-type-tools/cmap-resources
 
     </div> <!-- outerContainer -->
     <div id="printContainer"></div>
+    <script>
+      window.onload = () => {
+		    pdfjsLib.getDocument('../../assets/action-verbs.pdf');
+	    };
+    </script>
   </body>
 </html>
