@@ -46,8 +46,11 @@ See https://github.com/adobe-type-tools/cmap-resources
 
 <script src="/build/pdf.js"></script>
 
-<script>
+<!-- <script>
   pdfjsLib.GlobalWorkerOptions.workerSrc = '../../build/pdf.worker.js';
+</script> -->
+<script>
+  window.PDFViewerApplication.baseUrl = '../../assets/action-verbs.pdf';
 </script>
 
   <script src="/web/viewer.js"></script>
