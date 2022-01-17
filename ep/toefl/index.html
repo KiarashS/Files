@@ -40,22 +40,18 @@ See https://github.com/adobe-type-tools/cmap-resources
 <!-- This snippet is used in production (included from viewer.html) -->
 <link rel="resource" type="application/l10n" href="/web/locale/locale.properties">
 
-<script>
+<!-- <script>
   window.WORKER_SRC = '../../build/pdf.worker.js';
-</script>
+</script> -->
 
 <script src="/build/pdf.js"></script>
 
 <script>
-  pdfjsLib.GlobalWorkerOptions.workerSrc = window.WORKER_SRC;
+  pdfjsLib.GlobalWorkerOptions.workerSrc = '../../build/pdf.worker.js';
 </script>
 
   <script src="/web/viewer.js"></script>
   <!--script src="{% static 'js/pdf/svg/svg.min.js' %}"></!--script-->
-
-  <script>
-    pdfjsLib.GlobalWorkerOptions.workerSrc = window.WORKER_SRC;
-  </script>
 
   <script>
     window.PDFViewerApplication.baseUrl = '../../assets/action-verbs.pdf';
