@@ -41,13 +41,13 @@ See https://github.com/adobe-type-tools/cmap-resources
 <link rel="resource" type="application/l10n" href="/web/locale/locale.properties">
 
 <script>
-  window.WORKER_SRC = 'https://files.kiarash.pro/build/pdf.worker.js';
+  window.WORKER_SRC = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.12.313/pdf.worker.min.js';
 </script>
 
 <script src="/build/pdf.js"></script>
 
 <script>
-  pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://files.kiarash.pro/build/pdf.worker.js';
+  pdfjsLib.GlobalWorkerOptions.workerSrc = window.WORKER_SRC;
 </script>
 
   <script src="/web/viewer.js"></script>
