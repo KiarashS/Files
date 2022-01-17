@@ -5,8 +5,8 @@
 		<title>PDF.js Example</title>
 
         <script>
-            var pdfUrl = '../../assets/action-verbs.pdf';
-            var encodedUrl = encodeURIComponent(pdfUrl);
+            pdfUrl = '../../assets/action-verbs.pdf';
+            encodedUrl = encodeURIComponent(pdfUrl);
         </script>
 	</head>
 	<body>
@@ -20,7 +20,7 @@
 
         <script>
             window.onload = function () {
-                var src = '../../viewer/web/viewer.html?file=' + encodedUrl;
+                src = '../../viewer/web/viewer.html?file=' + encodedUrl;
                 document.getElementById('iframe-viewer').setAttribute("src", src);
             }
         </script>
