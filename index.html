@@ -12,6 +12,8 @@
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 <meta name="msapplication-TileColor" content="#da532c">
 <meta name="theme-color" content="#ffffff">
+<link rel="canonical" href="https://kiarashs.github.io/Files/" />
+<link rel="manifest" href="/Files/manifest.webmanifest">
 
 <style>
     @import 'https://fonts.googleapis.com/css?family=Montserrat:400,700|Raleway:300,400';
@@ -440,5 +442,14 @@
   </div>
 
   <div style="text-align: center; margin-top: 4%; padding-bottom: 1%;"><span>Compiled by Kiarash</span></div>
+
+  <script>
+    if (navigator.serviceWorker) {
+      navigator.serviceWorker.register (
+        '/Files/sw.js',
+        {scope: '/Files/'}
+      )
+    }
+</script>
 </body>
 </html>
