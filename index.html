@@ -1,455 +1,556 @@
 <!DOCTYPE HTML>
 <html>
+
 <head>
-<meta charset='utf-8'>
-<meta name='color-scheme' content='light dark'>
-<title>My Files/URLs</title>
+    <meta charset='utf-8'>
+    <meta name='color-scheme' content='light dark'>
+    <title>My Files/URLs</title>
 
-<link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
-<link rel="manifest" href="./site.webmanifest">
-<link rel="mask-icon" href="./safari-pinned-tab.svg" color="#5bbad5">
-<meta name="msapplication-TileColor" content="#da532c">
-<meta name="theme-color" content="#ffffff">
-<link rel="canonical" href="https://kiarashs.github.io/Files/" />
-<link rel="manifest" href="/Files/manifest.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <link rel="manifest" href="./site.webmanifest">
+    <link rel="mask-icon" href="./safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="canonical" href="https://kiarashs.github.io/Files/" />
+    <link rel="manifest" href="/Files/manifest.webmanifest">
 
-<style>
-    @import 'https://fonts.googleapis.com/css?family=Montserrat:400,700|Raleway:300,400';
-    /* colors */
-    /* tab setting */
-    /* breakpoints */
-    /* selectors relative to radio inputs */
-    html {
-    width: 100%;
-    height: 100%;
-    }
+    <style>
+        @import 'https://fonts.googleapis.com/css?family=Montserrat:400,700|Raleway:300,400';
 
-    body {
-    background: #efefef;
-    color: #333;
-    font-family: "Raleway";
-    height: 100%;
-    }
+        /* colors */
+        /* tab setting */
+        /* breakpoints */
+        /* selectors relative to radio inputs */
+        html {
+            width: 100%;
+            height: 100%;
+        }
 
-    body h1 {
-    text-align: center;
-    color: #428BFF;
-    font-weight: 300;
-    padding: 40px 0 20px 0;
-    margin: 0;
-    }
+        body {
+            background: #efefef;
+            color: #333;
+            font-family: "Raleway";
+            height: 100%;
+        }
 
-    a {color: rgb(0, 0, 238);}         /* Unvisited link  */
-    a:visited {color: rgb(0, 0, 238);} /* Visited link    */
-    a:hover {color: rgb(0, 0, 238);}   /* Mouse over link */
-    a:active {color: rgb(0, 0, 238);}  /* Selected link   */
+        body h1 {
+            text-align: center;
+            color: #428BFF;
+            font-weight: 300;
+            padding: 40px 0 20px 0;
+            margin: 0;
+        }
 
-    .tabs {
-    left: 50%;
-    transform: translateX(-50%);
-    position: relative;
-    /* background: white; */
-    background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
-    padding: 50px;
-    padding-bottom: 80px;
-    width: 85%;
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-    border-radius: 5px;
-    min-width: 240px;
-    }
-    .tabs input[name=tab-control] {
-    display: none;
-    }
-    .tabs .content section h2,
-    .tabs ul.tabs-head li label {
-    font-family: "Montserrat";
-    font-weight: bold;
-    font-size: 18px;
-    color: #428BFF;
-    }
-    .tabs ul.tabs-head {
-    list-style-type: none;
-    padding-left: 0;
-    display: flex;
-    flex-direction: row;
-    margin-bottom: 10px;
-    justify-content: space-between;
-    align-items: flex-end;
-    flex-wrap: wrap;
-    }
-    .tabs ul.tabs-head li {
-    box-sizing: border-box;
-    flex: 1;
-    width: 25%;
-    padding: 0 10px;
-    text-align: center;
-    }
-    .tabs ul.tabs-head li label {
-    transition: all 0.3s ease-in-out;
-    color: #929daf;
-    padding: 5px auto;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: block;
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
-    white-space: nowrap;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    }
-    .tabs ul.tabs-head li label br {
-    display: none;
-    }
-    .tabs ul.tabs-head li label svg {
-    fill: #929daf;
-    height: 1.2em;
-    vertical-align: bottom;
-    margin-right: 0.2em;
-    transition: all 0.2s ease-in-out;
-    }
-    .tabs ul.tabs-head li label:hover, .tabs ul.tabs-head li label:focus, .tabs ul.tabs-head li label:active {
-    outline: 0;
-    color: #bec5cf;
-    }
-    .tabs ul.tabs-head li label:hover svg, .tabs ul.tabs-head li label:focus svg, .tabs ul.tabs-head li label:active svg {
-    fill: #bec5cf;
-    }
-    .tabs .slider {
-    position: relative;
-    width: 25%;
-    transition: all 0.33s cubic-bezier(0.38, 0.8, 0.32, 1.07);
-    }
-    .tabs .slider .indicator {
-    position: relative;
-    width: 50px;
-    max-width: 100%;
-    margin: 0 auto;
-    height: 4px;
-    background: #428BFF;
-    border-radius: 1px;
-    }
-    .tabs .content {
-    margin-top: 30px;
-    }
-    .tabs .content section {
-    display: none;
-    -webkit-animation-name: content;
-    animation-name: content;
-    -webkit-animation-direction: normal;
-    animation-direction: normal;
-    -webkit-animation-duration: 0.3s;
-    animation-duration: 0.3s;
-    -webkit-animation-timing-function: ease-in-out;
-    animation-timing-function: ease-in-out;
-    -webkit-animation-iteration-count: 1;
-    animation-iteration-count: 1;
-    line-height: 1.4;
-    }
-    .tabs .content section h2 {
-    color: #428BFF;
-    display: none;
-    }
-    .tabs .content section h2::after {
-    content: "";
-    position: relative;
-    display: block;
-    width: 30px;
-    height: 3px;
-    background: #428BFF;
-    margin-top: 5px;
-    left: 1px;
-    }
-    .tabs input[name=tab-control]:nth-of-type(1):checked ~ ul > li:nth-child(1) > label {
-    cursor: default;
-    color: #428BFF;
-    }
-    .tabs input[name=tab-control]:nth-of-type(1):checked ~ ul > li:nth-child(1) > label svg {
-    fill: #428BFF;
-    }
-    @media (max-width: 600px) {
-    .tabs input[name=tab-control]:nth-of-type(1):checked ~ ul > li:nth-child(1) > label {
-    background: rgba(0, 0, 0, 0.08);
-    }
-    }
-    .tabs input[name=tab-control]:nth-of-type(1):checked ~ .slider {
-    transform: translateX(0%);
-    }
-    .tabs input[name=tab-control]:nth-of-type(1):checked ~ .content > section:nth-child(1) {
-    display: block;
-    }
-    .tabs input[name=tab-control]:nth-of-type(2):checked ~ ul > li:nth-child(2) > label {
-    cursor: default;
-    color: #428BFF;
-    }
-    .tabs input[name=tab-control]:nth-of-type(2):checked ~ ul > li:nth-child(2) > label svg {
-    fill: #428BFF;
-    }
-    @media (max-width: 600px) {
-    .tabs input[name=tab-control]:nth-of-type(2):checked ~ ul > li:nth-child(2) > label {
-    background: rgba(0, 0, 0, 0.08);
-    }
-    }
-    .tabs input[name=tab-control]:nth-of-type(2):checked ~ .slider {
-    transform: translateX(100%);
-    }
-    .tabs input[name=tab-control]:nth-of-type(2):checked ~ .content > section:nth-child(2) {
-    display: block;
-    }
-    .tabs input[name=tab-control]:nth-of-type(3):checked ~ ul > li:nth-child(3) > label {
-    cursor: default;
-    color: #428BFF;
-    }
-    .tabs input[name=tab-control]:nth-of-type(3):checked ~ ul > li:nth-child(3) > label svg {
-    fill: #428BFF;
-    }
-    @media (max-width: 600px) {
-    .tabs input[name=tab-control]:nth-of-type(3):checked ~ ul > li:nth-child(3) > label {
-    background: rgba(0, 0, 0, 0.08);
-    }
-    }
-    .tabs input[name=tab-control]:nth-of-type(3):checked ~ .slider {
-    transform: translateX(200%);
-    }
-    .tabs input[name=tab-control]:nth-of-type(3):checked ~ .content > section:nth-child(3) {
-    display: block;
-    }
-    .tabs input[name=tab-control]:nth-of-type(4):checked ~ ul > li:nth-child(4) > label {
-    cursor: default;
-    color: #428BFF;
-    }
-    .tabs input[name=tab-control]:nth-of-type(4):checked ~ ul > li:nth-child(4) > label svg {
-    fill: #428BFF;
-    }
-    @media (max-width: 600px) {
-    .tabs input[name=tab-control]:nth-of-type(4):checked ~ ul > li:nth-child(4) > label {
-    background: rgba(0, 0, 0, 0.08);
-    }
-    }
-    .tabs input[name=tab-control]:nth-of-type(4):checked ~ .slider {
-    transform: translateX(300%);
-    }
-    .tabs input[name=tab-control]:nth-of-type(4):checked ~ .content > section:nth-child(4) {
-    display: block;
-    }
-    @-webkit-keyframes content {
-    from {
-    opacity: 0;
-    transform: translateY(5%);
-    }
-    to {
-    opacity: 1;
-    transform: translateY(0%);
-    }
-    }
-    @keyframes content {
-    from {
-    opacity: 0;
-    transform: translateY(5%);
-    }
-    to {
-    opacity: 1;
-    transform: translateY(0%);
-    }
-    }
-    @media (max-width: 1000px) {
-    .tabs ul.tabs-head li label {
-    white-space: initial;
-    }
-    .tabs ul.tabs-head li label br {
-    display: initial;
-    }
-    .tabs ul.tabs-head li label svg {
-    height: 1.5em;
-    }
-    }
-    @media (max-width: 600px) {
-    .tabs ul.tabs-head li label {
-    padding: 5px;
-    border-radius: 5px;
-    }
-    .tabs ul.tabs-head li label span {
-    display: none;
-    }
-    .tabs .slider {
-    display: none;
-    }
-    .tabs .content {
-    margin-top: 20px;
-    }
-    .tabs .content section h2 {
-    display: block;
-    }
-    }
-</style>
+        a {
+            color: rgb(0, 0, 238);
+        }
+
+        /* Unvisited link  */
+        a:visited {
+            color: rgb(0, 0, 238);
+        }
+
+        /* Visited link    */
+        a:hover {
+            color: rgb(0, 0, 238);
+        }
+
+        /* Mouse over link */
+        a:active {
+            color: rgb(0, 0, 238);
+        }
+
+        /* Selected link   */
+
+        .tabs {
+            left: 50%;
+            transform: translateX(-50%);
+            position: relative;
+            /* background: white; */
+            background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
+            padding: 50px;
+            padding-bottom: 80px;
+            width: 85%;
+            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+            border-radius: 5px;
+            min-width: 240px;
+        }
+
+        .tabs input[name=tab-control] {
+            display: none;
+        }
+
+        .tabs .content section h2,
+        .tabs ul.tabs-head li label {
+            font-family: "Montserrat";
+            font-weight: bold;
+            font-size: 18px;
+            color: #428BFF;
+        }
+
+        .tabs ul.tabs-head {
+            list-style-type: none;
+            padding-left: 0;
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 10px;
+            justify-content: space-between;
+            align-items: flex-end;
+            flex-wrap: wrap;
+        }
+
+        .tabs ul.tabs-head li {
+            box-sizing: border-box;
+            flex: 1;
+            width: 25%;
+            padding: 0 10px;
+            text-align: center;
+        }
+
+        .tabs ul.tabs-head li label {
+            transition: all 0.3s ease-in-out;
+            color: #929daf;
+            padding: 5px auto;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: block;
+            cursor: pointer;
+            transition: all 0.2s ease-in-out;
+            white-space: nowrap;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        .tabs ul.tabs-head li label br {
+            display: none;
+        }
+
+        .tabs ul.tabs-head li label svg {
+            fill: #929daf;
+            height: 1.2em;
+            vertical-align: bottom;
+            margin-right: 0.2em;
+            transition: all 0.2s ease-in-out;
+        }
+
+        .tabs ul.tabs-head li label:hover,
+        .tabs ul.tabs-head li label:focus,
+        .tabs ul.tabs-head li label:active {
+            outline: 0;
+            color: #bec5cf;
+        }
+
+        .tabs ul.tabs-head li label:hover svg,
+        .tabs ul.tabs-head li label:focus svg,
+        .tabs ul.tabs-head li label:active svg {
+            fill: #bec5cf;
+        }
+
+        .tabs .slider {
+            position: relative;
+            width: 25%;
+            transition: all 0.33s cubic-bezier(0.38, 0.8, 0.32, 1.07);
+        }
+
+        .tabs .slider .indicator {
+            position: relative;
+            width: 50px;
+            max-width: 100%;
+            margin: 0 auto;
+            height: 4px;
+            background: #428BFF;
+            border-radius: 1px;
+        }
+
+        .tabs .content {
+            margin-top: 30px;
+        }
+
+        .tabs .content section {
+            display: none;
+            -webkit-animation-name: content;
+            animation-name: content;
+            -webkit-animation-direction: normal;
+            animation-direction: normal;
+            -webkit-animation-duration: 0.3s;
+            animation-duration: 0.3s;
+            -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out;
+            -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+            line-height: 1.4;
+        }
+
+        .tabs .content section h2 {
+            color: #428BFF;
+            display: none;
+        }
+
+        .tabs .content section h2::after {
+            content: "";
+            position: relative;
+            display: block;
+            width: 30px;
+            height: 3px;
+            background: #428BFF;
+            margin-top: 5px;
+            left: 1px;
+        }
+
+        .tabs input[name=tab-control]:nth-of-type(1):checked~ul>li:nth-child(1)>label {
+            cursor: default;
+            color: #428BFF;
+        }
+
+        .tabs input[name=tab-control]:nth-of-type(1):checked~ul>li:nth-child(1)>label svg {
+            fill: #428BFF;
+        }
+
+        @media (max-width: 600px) {
+            .tabs input[name=tab-control]:nth-of-type(1):checked~ul>li:nth-child(1)>label {
+                background: rgba(0, 0, 0, 0.08);
+            }
+        }
+
+        .tabs input[name=tab-control]:nth-of-type(1):checked~.slider {
+            transform: translateX(0%);
+        }
+
+        .tabs input[name=tab-control]:nth-of-type(1):checked~.content>section:nth-child(1) {
+            display: block;
+        }
+
+        .tabs input[name=tab-control]:nth-of-type(2):checked~ul>li:nth-child(2)>label {
+            cursor: default;
+            color: #428BFF;
+        }
+
+        .tabs input[name=tab-control]:nth-of-type(2):checked~ul>li:nth-child(2)>label svg {
+            fill: #428BFF;
+        }
+
+        @media (max-width: 600px) {
+            .tabs input[name=tab-control]:nth-of-type(2):checked~ul>li:nth-child(2)>label {
+                background: rgba(0, 0, 0, 0.08);
+            }
+        }
+
+        .tabs input[name=tab-control]:nth-of-type(2):checked~.slider {
+            transform: translateX(100%);
+        }
+
+        .tabs input[name=tab-control]:nth-of-type(2):checked~.content>section:nth-child(2) {
+            display: block;
+        }
+
+        .tabs input[name=tab-control]:nth-of-type(3):checked~ul>li:nth-child(3)>label {
+            cursor: default;
+            color: #428BFF;
+        }
+
+        .tabs input[name=tab-control]:nth-of-type(3):checked~ul>li:nth-child(3)>label svg {
+            fill: #428BFF;
+        }
+
+        @media (max-width: 600px) {
+            .tabs input[name=tab-control]:nth-of-type(3):checked~ul>li:nth-child(3)>label {
+                background: rgba(0, 0, 0, 0.08);
+            }
+        }
+
+        .tabs input[name=tab-control]:nth-of-type(3):checked~.slider {
+            transform: translateX(200%);
+        }
+
+        .tabs input[name=tab-control]:nth-of-type(3):checked~.content>section:nth-child(3) {
+            display: block;
+        }
+
+        .tabs input[name=tab-control]:nth-of-type(4):checked~ul>li:nth-child(4)>label {
+            cursor: default;
+            color: #428BFF;
+        }
+
+        .tabs input[name=tab-control]:nth-of-type(4):checked~ul>li:nth-child(4)>label svg {
+            fill: #428BFF;
+        }
+
+        @media (max-width: 600px) {
+            .tabs input[name=tab-control]:nth-of-type(4):checked~ul>li:nth-child(4)>label {
+                background: rgba(0, 0, 0, 0.08);
+            }
+        }
+
+        .tabs input[name=tab-control]:nth-of-type(4):checked~.slider {
+            transform: translateX(300%);
+        }
+
+        .tabs input[name=tab-control]:nth-of-type(4):checked~.content>section:nth-child(4) {
+            display: block;
+        }
+
+        @-webkit-keyframes content {
+            from {
+                opacity: 0;
+                transform: translateY(5%);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0%);
+            }
+        }
+
+        @keyframes content {
+            from {
+                opacity: 0;
+                transform: translateY(5%);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0%);
+            }
+        }
+
+        @media (max-width: 1000px) {
+            .tabs ul.tabs-head li label {
+                white-space: initial;
+            }
+
+            .tabs ul.tabs-head li label br {
+                display: initial;
+            }
+
+            .tabs ul.tabs-head li label svg {
+                height: 1.5em;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .tabs ul.tabs-head li label {
+                padding: 5px;
+                border-radius: 5px;
+            }
+
+            .tabs ul.tabs-head li label span {
+                display: none;
+            }
+
+            .tabs .slider {
+                display: none;
+            }
+
+            .tabs .content {
+                margin-top: 20px;
+            }
+
+            .tabs .content section h2 {
+                display: block;
+            }
+        }
+    </style>
 
 </head>
+
 <body>
-<h1>List of My Files/URLs</h1>
-<div class="tabs">
-  <input type="radio" id="tab1" name="tab-control" checked>
-  <input type="radio" id="tab2" name="tab-control">
-  <input type="radio" id="tab3" name="tab-control">
-  <input type="radio" id="tab4" name="tab-control">
-  <ul class="tabs-head">
-      <li title="PDFs"><label for="tab1" role="button"><br><span>PDFs</span></label></li>
-      <li title="Links"><label for="tab2" role="button"><br><span>Links</span></label></li>
-      <li title="Tools"><label for="tab3" role="button"><br><span>Tools</span></label></li>
-      <li title="Podcasts"><label for="tab4" role="button"><br><span>Podcasts</span></label></li>
-  </ul>
+    <h1>List of My Files/URLs</h1>
+    <div class="tabs">
+        <input type="radio" id="tab1" name="tab-control" checked>
+        <input type="radio" id="tab2" name="tab-control">
+        <input type="radio" id="tab3" name="tab-control">
+        <input type="radio" id="tab4" name="tab-control">
+        <ul class="tabs-head">
+            <li title="PDFs"><label for="tab1" role="button"><br><span>PDFs</span></label></li>
+            <li title="Links"><label for="tab2" role="button"><br><span>Links</span></label></li>
+            <li title="Tools"><label for="tab3" role="button"><br><span>Tools</span></label></li>
+            <li title="Podcasts"><label for="tab4" role="button"><br><span>Podcasts</span></label></li>
+        </ul>
 
-  <div class="slider">
-      <div class="indicator"></div>
-  </div>
-  <div class="content">
-      <section>
-          <h2>PDFs</h2>
-          <ul>
-            <li><a href='/v/action-verbs/'>Action Verbs</a></li>
-            <li><a href='/v/toefl-grammar/'>Building Grammar Skills For the TOEFL</a></li>
-            <li><a href='/v/GRE-cheatsheet-ttp/'>GRE_Equation_Guide_TTP</a></li>
-            <li><a href='/v/transitions/'>Transitions</a></li>
-            <li><a href='/v/transitions2/'>Transitions Words and Phrases</a></li>
-            <li><a href='/v/cheatsheet_analysis_I/'>Analysis I Cheat Sheet</a></li>
-            <li><a href='/v/Probability_Statistics/'>Probability & Statistics Cheat Sheet</a></li>
-            <li><a href='/v/python-dict-methods/'>Cheat sheet Python Dict Methods</a></li>
-            <li><a href='/v/python-list-methods/'>Cheat sheet Python List Methods</a></li>
-            <li><a href='/v/python-set-methods/'>Cheat sheet Python Set Methods</a></li>
-            <li><a href='/v/python-string-methods/'>Cheat Sheet Python String Methods</a></li>
-            <li><a href='/v/transitions3/'>Transitions 3</a></li>
-            <li><a href='/v/speaking-golden-reasons/'>Golden reasons for speaking</a></li>
-            <li><a href='/v/writing-brainstorm/'>Writing brainstorm</a></li>
-            <li><a href='/v/toefl-expressions-brainstorm/'>Toefl Expressions & Brainstorm (Speak & Write)</a></li>
-            <li><a href='/v/prepositions/'>Prepositions</a></li>
-            <li><a href='/v/prepositionary/'>Prepositionary</a></li>
-            <li><a href='/v/essay-activator/'>Essay Activator Summary</a></li>
-            <!-- <li><a href='/v/collocations-1/'>Collocations 1</a></li> -->
-            <li><a href='/v/collocations-2/'>Collocations 2</a></li>
-            <li><a href='/v/collocations-3/'>Collocations 3</a></li>
-            <li><a href='/v/collocations-4/'>Collocations 4</a></li>
-            <!-- <li><a href='/v/perfect-phrases/'>Perfect Phrases for the TOEFL Speaking and Writing Sections</a></li> -->
-            <li><a href='/v/python-cheatsheet/'>Python cheat sheet</a></li>
-            <li><a href='/v/learn-python3/'>Learn Python 3 the Hard Way</a></li>
-            <li><a href='/v/learn-more-python3/'>Learn More Python 3 the Hard Way</a></li>
-            <li><a href='/v/python-crash-course2/'>Python Crash Course, 2nd Edition</a></li>
-            <li><a href='/v/idea-bank-technology/'>Idea Bank - Technology</a></li>
-            <li><a href='/v/idea-bank-education/'>Idea Bank - Education</a></li>
-            <li><a href='/v/idea-bank-government/'>Idea Bank - Government</a></li>
-            <li><a href='/v/idea-bank-business/'>Idea Bank - Business</a></li>
-            <li><a href='/v/idea-bank-health/'>Idea Bank - Health</a></li>
-            <li><a href='/v/git-cheatsheet1/'>Git cheat sheet 1</a></li>
-            <li><a href='/v/git-cheatsheet2/'>Git cheat sheet 2</a></li>
-            <li><a href='/v/matplotlib-cheatsheet1/'>Matplotlib cheat sheet 1</a></li>
-            <li><a href='/v/matplotlib-cheatsheet2/'>Matplotlib for beginners - cheat sheet 2</a></li>
-            <li><a href='/v/matplotlib-cheatsheet3/'>Matplotlib for intermediate users - cheat sheet 3</a></li>
-            <li><a href='/v/matplotlib-cheatsheet4/'>Matplotlib tips & tricks - cheat sheet 4</a></li>
-            <li><a href='/v/matplotlib-cheatsheet5/'>Matplotlib cheat sheet 5</a></li>
-            <li><a href='/v/dl-tips-cheatsheet/'>Cheat sheet deep learning tips tricks</a></li>
-            <li><a href='/v/ets-gre-math-review/'>GRE math review - ETS</a></li>
-            <li><a href='/v/gre-math-flashcards/'>GRE math flashcards</a></li>
-            <li><a href='/v/gre-quant-review/'>GRE quant review</a></li>
-            <li><a href='/v/gre-sentence-equivalence/'>GRE Sentence Equivalence</a></li>
-            <li><a href='/v/nlp-with-python-nltk/'>NLP with python and NLTK - cheat sheet</a></li>
-            <li><a href='/v/python-nutshell3/'>Python in a Nutshell: A Desktop Quick Reference 3rd Edition</a></li>
-            <li><a href='/v/fluent-python2/'>Fluent Python 2nd Edition</a></li>
-            <li><a href='/v/sql-v1/'>SQL cheat sheet V1</a></li>
-            <li><a href='/v/sql-v2-dark/'>SQL cheat sheet V2</a></li>
-            <li><a href='/v/paraphrase1/'>Paraphrasing Strategies</a></li>
-            <li><a href='/v/javascript-cheatsheet/'>Javascript cheat sheet</a></li>
-            <li><a href='/v/typescript-control-flow-analysis/'>TypeScript Control Flow Analysis</a></li>
-            <li><a href='/v/typescript-types/'>TypeScript Types</a></li>
-            <li><a href='/v/typescript-interfaces/'>TypeScript Interfaces</a></li>
-            <li><a href='/v/typescript-classes/'>TypeScript Classes</a></li>
-            <li><a href='/v/css3-cheatsheet/'>CSS3 cheat sheet</a></li>
-            <li><a href='/v/python-cheatsheets/'>Python cheat sheets</a></li>
-            <li><a href='/v/matplotlib-colors/'>Matplotlib - List of named colors</a></li>
-            <li><a href='/v/color-chart/'>RGB hex colors chart</a></li>
-            <li><a href='/v/simplicity-cheatsheet/'>Simplicity-The Finer Art Of Creating Software Cheat Sheet</a></li>
-            <li><a href='/v/agile-poster/'>Agile Poster</a></li>
-            <li><a href='/v/agile-scrum-cheatsheet/'>Agile and Scrum Cheat Sheet</a></li>
-            <li><a href='/v/ultimate-python-cheatsheet/'>The Ultimate Python Cheat Sheet</a></li>
-            <li><a href='/v/python-cheatsheet-classes/'>Python Cheat Sheet: Classes</a></li>
-            <li><a href='/v/python-cheatsheet-functricks/'>Python Cheat Sheet: Functions and Tricks</a></li>
-            <li><a href='/v/python-cheatsheet-interviewqs/'>Python Cheat Sheet: 14 Interview Questions</a></li>
-            <li><a href='/v/python-cheatsheet-keywords/'>Python Cheat Sheet: Keywords</a></li>
-            <li><a href='/v/python-cheatsheet-numpy/'>Python Cheat Sheet: NumPy</a></li>
-            <li><a href='/v/latexsheet/'>Latex Cheat Sheet</a></li>
-            <li><a href='/v/probability-cheatheet/'>Probability Cheat Sheet</a></li>
-            <li><a href='/v/aspnetcore-cheatsheet/'>ASP Net Core Cheat Sheet</a></li>
-            <li><a href='/v/python-regular-exp/'>Python Regular Expressions Cheat Sheet</a></li>
-            <li><a href='/v/net-regular-exp/'>.Net Regular Expressions Cheat Sheet</a></li>
-            <li><a href='/v/sql-commands/'>SQL Commands Cheat Sheet</a></li>
-            <li><a href='/v/http-headers/'>HTTP Headers Cheat Sheet</a></li>
-            <li><a href='/v/http-status-codes/'>HTTP Status Codes Cheat Sheet</a></li>
-            <li><a href='/v/seo-cheatsheet/'>The Web Developer's SEO Cheat Sheet</a></li>
-            <li><a href='/v/redux-cheatsheet/'>Redux Cheat Sheet</a></li>
-            <li><a href='/v/1300-math-formulas/'>1300 Math Formulas</a></li>
-            <li><a href='/v/vajename-riazi/'>Vajename Riazi</a></li>
-            <li><a href='/v/common-english-mistakes/'>Common English Mistakes</a></li>
-            <li><a href='/v/html5-cheatsheet/'>HTML 5 Cheat Sheet</a></li>
-            </ul>
-      </section>
-      <section>
-          <h2>Links</h2>
-          <ul>
-            <li><a href="https://stanford.edu/~shervine/teaching/" target="_blank" rel="nofollow">Computer science teaching at Stanford</a></li>
-            <li><a href="https://github.com/FavioVazquez/ds-cheatsheets" target="_blank" rel="nofollow">List of Data Science Cheat sheets to rule the world</a></li>
-            <li><a href="https://github.com/rougier/scientific-visualization-book" target="_blank" rel="nofollow">Scientific Visualization: Python + Matplotlib</a></li>
-            <li><a href="https://www.labri.fr/perso/nrougier/python-opengl/" target="_blank" rel="nofollow">Python & OpenGL for Scientific Visualization</a></li>
-            <li><a href="https://www.labri.fr/perso/nrougier/from-python-to-numpy/" target="_blank" rel="nofollow">From Python to Numpy</a></li>
-            <li><a href="/v/cambridge-dictionary/" target="_blank" rel="nofollow">Cambridge Dictionary</a></li>
-            <li><a href="/v/mw-dictionary/" target="_blank" rel="nofollow">Merriam-Webster Dictionary</a></li>
-            <li><a href="https://cheatography.com/sree017/cheat-sheets/nlp/" target="_blank" rel="nofollow">NLP Cheat Sheet</a></li>
-            <li><a href="https://mehrdad-dev.ir/ml-andrew-ng/" target="_blank" rel="nofollow">Machine Learning - Persian</a></li>
-            <li><a href="https://www.python-graph-gallery.com/" target="_blank" rel="nofollow">The Python Graph Gallery</a></li>
-            <li><a href="https://httpstatuses.com/" target="_blank" rel="nofollow">HTTP Status Codes</a></li>
-            <li><a href="https://github.com/for-GET/know-your-http-well/blob/master/headers.md" target="_blank" rel="nofollow">HTTP Headers</a></li>
-            <li><a href="https://github.com/for-GET/know-your-http-well/blob/master/relations.md" target="_blank" rel="nofollow">HTTP Relations</a></li>
-            <li><a href="https://overapi.com/" target="_blank" rel="nofollow">Collecting All Cheat Sheets</a></li>
-            <li><a href="http://probabilitybook.net/" target="_blank" rel="nofollow">Introduction to Probability textbook</a></li>
-            <li><a href="https://medium.com/@anushkhabajpai/top-data-science-cheat-sheets-ml-dl-python-r-sql-maths-statistics-5239d4568225" target="_blank" rel="nofollow">Top DATA SCIENCE Cheat Sheets (ML, DL, Python, R, SQL, Maths & Statistics)</a></li>
-            <li><a href="https://devhints.io/" target="_blank" rel="nofollow">Rico's cheat Sheets</a></li>
-            <li><a href="https://lawsofux.com/" target="_blank" rel="nofollow">Laws of UX</a></li>
-            <li><a href="https://htmldom.dev/" target="_blank" rel="nofollow">Manage HTML DOM with vanilla JavaScript</a></li>
-            <li><a href="https://htmlcheatsheet.com/" target="_blank" rel="nofollow">HTML, CSS, and JS Cheat Sheets</a></li>
-            <li><a href="https://reactcheatsheet.com/" target="_blank" rel="nofollow">React Cheat Sheet</a></li>
-            <li><a href="https://github.com/MichaelCade/90DaysOfDevOps/" target="_blank" rel="nofollow">90 Days Of DevOps</a></li>
-            <li><a href="https://microsoft.github.io/win-student-devs/#/30DaysOfPWA/kickoff" target="_blank" rel="nofollow">30 Days of PWA</a></li>
-            <li><a href="https://github.com/Asabeneh/30-Days-Of-JavaScript/" target="_blank" rel="nofollow">30 Days of JavaScript</a></li>
-            <li><a href="https://github.com/ktaranov/sqlserver-kit/" target="_blank" rel="nofollow">Useful links, scripts, tools and best practice for Microsoft SQL Server Database</a></li>
-            <li><a href="https://github.com/BrentOzarULTD/SQL-Server-First-Responder-Kit/" target="_blank" rel="nofollow">SQL Server scripts for health checks and performance tuning</a></li>
-            <li><a href="https://github.com/dataplat/dbatools/" target="_blank" rel="nofollow">Automate SQL Server tasks and encourage best practices</a></li>
-            <li><a href="https://github.com/microsoft/tigertoolbox/" target="_blank" rel="nofollow">SQL Server Toolbox repository for Tiger team</a></li>
-            <li><a href="https://github.com/bulentgucuk/DBA-Scripts/" target="_blank" rel="nofollow">SQL Server Scripts for DBAs</a></li>
-          </ul>
-      </section>
-      <section>
-          <h2>Tools</h2>
-          <ul>
-            <li><a href="https://keycode.info/" target="_blank" rel="nofollow">JavaScript Event KeyCodes</a></li>
-            <li><a href="https://www.toptal.com/developers/webdevchecklist" target="_blank" rel="nofollow">Web Developer Checklist</a></li>
-          </ul>
-      </section>
-      <section>
-          <h2>Podcasts</h2>
+        <div class="slider">
+            <div class="indicator"></div>
+        </div>
+        <div class="content">
+            <section>
+                <h2>PDFs</h2>
+                <ul>
+                    <li><a href='/v/action-verbs/'>Action Verbs</a></li>
+                    <li><a href='/v/toefl-grammar/'>Building Grammar Skills For the TOEFL</a></li>
+                    <li><a href='/v/GRE-cheatsheet-ttp/'>GRE_Equation_Guide_TTP</a></li>
+                    <li><a href='/v/transitions/'>Transitions</a></li>
+                    <li><a href='/v/transitions2/'>Transitions Words and Phrases</a></li>
+                    <li><a href='/v/cheatsheet_analysis_I/'>Analysis I Cheat Sheet</a></li>
+                    <li><a href='/v/Probability_Statistics/'>Probability & Statistics Cheat Sheet</a></li>
+                    <li><a href='/v/python-dict-methods/'>Cheat sheet Python Dict Methods</a></li>
+                    <li><a href='/v/python-list-methods/'>Cheat sheet Python List Methods</a></li>
+                    <li><a href='/v/python-set-methods/'>Cheat sheet Python Set Methods</a></li>
+                    <li><a href='/v/python-string-methods/'>Cheat Sheet Python String Methods</a></li>
+                    <li><a href='/v/transitions3/'>Transitions 3</a></li>
+                    <li><a href='/v/speaking-golden-reasons/'>Golden reasons for speaking</a></li>
+                    <li><a href='/v/writing-brainstorm/'>Writing brainstorm</a></li>
+                    <li><a href='/v/toefl-expressions-brainstorm/'>Toefl Expressions & Brainstorm (Speak & Write)</a>
+                    </li>
+                    <li><a href='/v/prepositions/'>Prepositions</a></li>
+                    <li><a href='/v/prepositionary/'>Prepositionary</a></li>
+                    <li><a href='/v/essay-activator/'>Essay Activator Summary</a></li>
+                    <!-- <li><a href='/v/collocations-1/'>Collocations 1</a></li> -->
+                    <li><a href='/v/collocations-2/'>Collocations 2</a></li>
+                    <li><a href='/v/collocations-3/'>Collocations 3</a></li>
+                    <li><a href='/v/collocations-4/'>Collocations 4</a></li>
+                    <!-- <li><a href='/v/perfect-phrases/'>Perfect Phrases for the TOEFL Speaking and Writing Sections</a></li> -->
+                    <li><a href='/v/python-cheatsheet/'>Python cheat sheet</a></li>
+                    <li><a href='/v/learn-python3/'>Learn Python 3 the Hard Way</a></li>
+                    <li><a href='/v/learn-more-python3/'>Learn More Python 3 the Hard Way</a></li>
+                    <li><a href='/v/python-crash-course2/'>Python Crash Course, 2nd Edition</a></li>
+                    <li><a href='/v/idea-bank-technology/'>Idea Bank - Technology</a></li>
+                    <li><a href='/v/idea-bank-education/'>Idea Bank - Education</a></li>
+                    <li><a href='/v/idea-bank-government/'>Idea Bank - Government</a></li>
+                    <li><a href='/v/idea-bank-business/'>Idea Bank - Business</a></li>
+                    <li><a href='/v/idea-bank-health/'>Idea Bank - Health</a></li>
+                    <li><a href='/v/git-cheatsheet1/'>Git cheat sheet 1</a></li>
+                    <li><a href='/v/git-cheatsheet2/'>Git cheat sheet 2</a></li>
+                    <li><a href='/v/matplotlib-cheatsheet1/'>Matplotlib cheat sheet 1</a></li>
+                    <li><a href='/v/matplotlib-cheatsheet2/'>Matplotlib for beginners - cheat sheet 2</a></li>
+                    <li><a href='/v/matplotlib-cheatsheet3/'>Matplotlib for intermediate users - cheat sheet 3</a></li>
+                    <li><a href='/v/matplotlib-cheatsheet4/'>Matplotlib tips & tricks - cheat sheet 4</a></li>
+                    <li><a href='/v/matplotlib-cheatsheet5/'>Matplotlib cheat sheet 5</a></li>
+                    <li><a href='/v/dl-tips-cheatsheet/'>Cheat sheet deep learning tips tricks</a></li>
+                    <li><a href='/v/ets-gre-math-review/'>GRE math review - ETS</a></li>
+                    <li><a href='/v/gre-math-flashcards/'>GRE math flashcards</a></li>
+                    <li><a href='/v/gre-quant-review/'>GRE quant review</a></li>
+                    <li><a href='/v/gre-sentence-equivalence/'>GRE Sentence Equivalence</a></li>
+                    <li><a href='/v/nlp-with-python-nltk/'>NLP with python and NLTK - cheat sheet</a></li>
+                    <li><a href='/v/python-nutshell3/'>Python in a Nutshell: A Desktop Quick Reference 3rd Edition</a>
+                    </li>
+                    <li><a href='/v/fluent-python2/'>Fluent Python 2nd Edition</a></li>
+                    <li><a href='/v/sql-v1/'>SQL cheat sheet V1</a></li>
+                    <li><a href='/v/sql-v2-dark/'>SQL cheat sheet V2</a></li>
+                    <li><a href='/v/paraphrase1/'>Paraphrasing Strategies</a></li>
+                    <li><a href='/v/javascript-cheatsheet/'>Javascript cheat sheet</a></li>
+                    <li><a href='/v/typescript-control-flow-analysis/'>TypeScript Control Flow Analysis</a></li>
+                    <li><a href='/v/typescript-types/'>TypeScript Types</a></li>
+                    <li><a href='/v/typescript-interfaces/'>TypeScript Interfaces</a></li>
+                    <li><a href='/v/typescript-classes/'>TypeScript Classes</a></li>
+                    <li><a href='/v/css3-cheatsheet/'>CSS3 cheat sheet</a></li>
+                    <li><a href='/v/python-cheatsheets/'>Python cheat sheets</a></li>
+                    <li><a href='/v/matplotlib-colors/'>Matplotlib - List of named colors</a></li>
+                    <li><a href='/v/color-chart/'>RGB hex colors chart</a></li>
+                    <li><a href='/v/simplicity-cheatsheet/'>Simplicity-The Finer Art Of Creating Software Cheat
+                            Sheet</a></li>
+                    <li><a href='/v/agile-poster/'>Agile Poster</a></li>
+                    <li><a href='/v/agile-scrum-cheatsheet/'>Agile and Scrum Cheat Sheet</a></li>
+                    <li><a href='/v/ultimate-python-cheatsheet/'>The Ultimate Python Cheat Sheet</a></li>
+                    <li><a href='/v/python-cheatsheet-classes/'>Python Cheat Sheet: Classes</a></li>
+                    <li><a href='/v/python-cheatsheet-functricks/'>Python Cheat Sheet: Functions and Tricks</a></li>
+                    <li><a href='/v/python-cheatsheet-interviewqs/'>Python Cheat Sheet: 14 Interview Questions</a></li>
+                    <li><a href='/v/python-cheatsheet-keywords/'>Python Cheat Sheet: Keywords</a></li>
+                    <li><a href='/v/python-cheatsheet-numpy/'>Python Cheat Sheet: NumPy</a></li>
+                    <li><a href='/v/latexsheet/'>Latex Cheat Sheet</a></li>
+                    <li><a href='/v/probability-cheatheet/'>Probability Cheat Sheet</a></li>
+                    <li><a href='/v/aspnetcore-cheatsheet/'>ASP Net Core Cheat Sheet</a></li>
+                    <li><a href='/v/python-regular-exp/'>Python Regular Expressions Cheat Sheet</a></li>
+                    <li><a href='/v/net-regular-exp/'>.Net Regular Expressions Cheat Sheet</a></li>
+                    <li><a href='/v/sql-commands/'>SQL Commands Cheat Sheet</a></li>
+                    <li><a href='/v/http-headers/'>HTTP Headers Cheat Sheet</a></li>
+                    <li><a href='/v/http-status-codes/'>HTTP Status Codes Cheat Sheet</a></li>
+                    <li><a href='/v/seo-cheatsheet/'>The Web Developer's SEO Cheat Sheet</a></li>
+                    <li><a href='/v/redux-cheatsheet/'>Redux Cheat Sheet</a></li>
+                    <li><a href='/v/1300-math-formulas/'>1300 Math Formulas</a></li>
+                    <li><a href='/v/vajename-riazi/'>Vajename Riazi</a></li>
+                    <li><a href='/v/common-english-mistakes/'>Common English Mistakes</a></li>
+                    <li><a href='/v/html5-cheatsheet/'>HTML 5 Cheat Sheet</a></li>
+                </ul>
+            </section>
+            <section>
+                <h2>Links</h2>
+                <ul>
+                    <li><a href="https://stanford.edu/~shervine/teaching/" target="_blank" rel="nofollow">Computer
+                            science teaching at Stanford</a></li>
+                    <li><a href="https://github.com/FavioVazquez/ds-cheatsheets" target="_blank" rel="nofollow">List of
+                            Data Science Cheat sheets to rule the world</a></li>
+                    <li><a href="https://github.com/rougier/scientific-visualization-book" target="_blank"
+                            rel="nofollow">Scientific Visualization: Python + Matplotlib</a></li>
+                    <li><a href="https://www.labri.fr/perso/nrougier/python-opengl/" target="_blank"
+                            rel="nofollow">Python & OpenGL for Scientific Visualization</a></li>
+                    <li><a href="https://www.labri.fr/perso/nrougier/from-python-to-numpy/" target="_blank"
+                            rel="nofollow">From Python to Numpy</a></li>
+                    <li><a href="/v/cambridge-dictionary/" target="_blank" rel="nofollow">Cambridge Dictionary</a></li>
+                    <li><a href="/v/mw-dictionary/" target="_blank" rel="nofollow">Merriam-Webster Dictionary</a></li>
+                    <li><a href="https://cheatography.com/sree017/cheat-sheets/nlp/" target="_blank" rel="nofollow">NLP
+                            Cheat Sheet</a></li>
+                    <li><a href="https://mehrdad-dev.ir/ml-andrew-ng/" target="_blank" rel="nofollow">Machine Learning -
+                            Persian</a></li>
+                    <li><a href="https://www.python-graph-gallery.com/" target="_blank" rel="nofollow">The Python Graph
+                            Gallery</a></li>
+                    <li><a href="https://httpstatuses.com/" target="_blank" rel="nofollow">HTTP Status Codes</a></li>
+                    <li><a href="https://github.com/for-GET/know-your-http-well/blob/master/headers.md" target="_blank"
+                            rel="nofollow">HTTP Headers</a></li>
+                    <li><a href="https://github.com/for-GET/know-your-http-well/blob/master/relations.md"
+                            target="_blank" rel="nofollow">HTTP Relations</a></li>
+                    <li><a href="https://overapi.com/" target="_blank" rel="nofollow">Collecting All Cheat Sheets</a>
+                    </li>
+                    <li><a href="http://probabilitybook.net/" target="_blank" rel="nofollow">Introduction to Probability
+                            textbook</a></li>
+                    <li><a href="https://medium.com/@anushkhabajpai/top-data-science-cheat-sheets-ml-dl-python-r-sql-maths-statistics-5239d4568225"
+                            target="_blank" rel="nofollow">Top DATA SCIENCE Cheat Sheets (ML, DL, Python, R, SQL, Maths
+                            & Statistics)</a></li>
+                    <li><a href="https://devhints.io/" target="_blank" rel="nofollow">Rico's cheat Sheets</a></li>
+                    <li><a href="https://lawsofux.com/" target="_blank" rel="nofollow">Laws of UX</a></li>
+                    <li><a href="https://htmldom.dev/" target="_blank" rel="nofollow">Manage HTML DOM with vanilla
+                            JavaScript</a></li>
+                    <li><a href="https://htmlcheatsheet.com/" target="_blank" rel="nofollow">HTML, CSS, and JS Cheat
+                            Sheets</a></li>
+                    <li><a href="https://reactcheatsheet.com/" target="_blank" rel="nofollow">React Cheat Sheet</a></li>
+                    <li><a href="https://github.com/MichaelCade/90DaysOfDevOps/" target="_blank" rel="nofollow">90 Days
+                            Of DevOps</a></li>
+                    <li><a href="https://microsoft.github.io/win-student-devs/#/30DaysOfPWA/kickoff" target="_blank"
+                            rel="nofollow">30 Days of PWA</a></li>
+                    <li><a href="https://github.com/Asabeneh/30-Days-Of-JavaScript/" target="_blank" rel="nofollow">30
+                            Days of JavaScript</a></li>
+                    <li><a href="https://github.com/ktaranov/sqlserver-kit/" target="_blank" rel="nofollow">Useful
+                            links, scripts, tools and best practice for Microsoft SQL Server Database</a></li>
+                    <li><a href="https://github.com/BrentOzarULTD/SQL-Server-First-Responder-Kit/" target="_blank"
+                            rel="nofollow">SQL Server scripts for health checks and performance tuning</a></li>
+                    <li><a href="https://github.com/dataplat/dbatools/" target="_blank" rel="nofollow">Automate SQL
+                            Server tasks and encourage best practices</a></li>
+                    <li><a href="https://github.com/microsoft/tigertoolbox/" target="_blank" rel="nofollow">SQL Server
+                            Toolbox repository for Tiger team</a></li>
+                    <li><a href="https://github.com/bulentgucuk/DBA-Scripts/" target="_blank" rel="nofollow">SQL Server
+                            Scripts for DBAs</a></li>
+                </ul>
+            </section>
+            <section>
+                <h2>Tools</h2>
+                <ul>
+                    <li><a href="https://keycode.info/" target="_blank" rel="nofollow">JavaScript Event KeyCodes</a>
+                    </li>
+                    <li><a href="https://www.toptal.com/developers/webdevchecklist" target="_blank" rel="nofollow">Web
+                            Developer Checklist</a></li>
+                </ul>
+            </section>
+            <section>
+                <h2>Podcasts</h2>
 
-      </section>
-  </div>
-  </div>
+            </section>
+        </div>
+    </div>
 
-  <div style="text-align: center; margin-top: 4%; padding-bottom: 1%;"><span>Compiled by Kiarash</span></div>
+    <div style="text-align: center; margin-top: 4%; padding-bottom: 1%;"><span>Compiled by Kiarash</span></div>
 
-  <script>
-    if (navigator.serviceWorker) {
-      navigator.serviceWorker.register (
-        '/Files/sw.js',
-        {scope: '/Files/'}
-      )
-    }
-</script>
+    <script>
+        if (navigator.serviceWorker) {
+            navigator.serviceWorker.register(
+                '/Files/sw.js', {
+                    scope: '/Files/'
+                }
+            )
+        }
+    </script>
 </body>
+
 </html>
