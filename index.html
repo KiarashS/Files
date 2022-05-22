@@ -681,6 +681,9 @@
             else if (hashTag == 'tools') document.getElementById('tab3').click();
             else if (hashTag == 'courses') document.getElementById('tab4').click();
         }
+        else {
+            window.location.hash= '#pdfs';
+        }
 
         const tabs = document.querySelectorAll("[name=tab-control]");
         function toggleTab() {
