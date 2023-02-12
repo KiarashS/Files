@@ -3,11 +3,11 @@
     "name": "Kiarash Soleimanzadeh's Files and URLs",
     "short_name": "KIA_FILES",
     // Description what your app is
-    "description": "The List of Useful Files and URLs",
+    "description": "The List of Useful Files and URLs (Resources)",
 
     // Scope and start URL - these need to change to yours
-    "scope": "/Files/",
-    "start_url": "/Files/",
+    "scope": "/",
+    "start_url": "/",
 
     // colours of the app as displayed in the installer
     "background_color": "#ffffff",
@@ -21,7 +21,7 @@
     // the type and the size to your needs. If the size isn't correct, 
     // you may not be able to install the app. 
     "icons": [{
-        "src": "/Files/android-chrome-512x512.png",
+        "src": "/android-chrome-512x512.png",
         "type": "image/png",
         "sizes": "512x512"
     }]
