@@ -3,7 +3,7 @@
     "name": "Kiarash Soleimanzadeh's Files and URLs",
     "short_name": "KIA_FILES",
     // Description what your app is
-    "description": "The List of Useful Files and URLs (Resources)",
+    "description": "The List of Useful Files and URLs (Directory)",
 
     // Scope and start URL - these need to change to yours
     "scope": "/",
