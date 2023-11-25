@@ -104,7 +104,7 @@
         .tabs ul.tabs-head li {
             box-sizing: border-box;
             flex: 1;
-            width: 25%;
+            width: 20%;
             padding: 0 10px;
             text-align: center;
         }
@@ -153,7 +153,7 @@
 
         .tabs .slider {
             position: relative;
-            width: 25%;
+            width: 20%;
             transition: all 0.33s cubic-bezier(0.38, 0.8, 0.32, 1.07);
         }
 
@@ -291,6 +291,29 @@
         }
 
         .tabs input[name=tab-control]:nth-of-type(4):checked~.content>section:nth-child(4) {
+            display: block;
+        }
+
+        .tabs input[name=tab-control]:nth-of-type(5):checked~ul>li:nth-child(5)>label {
+            cursor: default;
+            color: #ff701d;
+        }
+
+        .tabs input[name=tab-control]:nth-of-type(5):checked~ul>li:nth-child(5)>label svg {
+            /*fill: #428BFF;*/
+        }
+
+        @media (max-width: 600px) {
+            .tabs input[name=tab-control]:nth-of-type(5):checked~ul>li:nth-child(5)>label {
+                background: rgba(0, 0, 0, 0.08);
+            }
+        }
+
+        .tabs input[name=tab-control]:nth-of-type(5):checked~.slider {
+            transform: translateX(400%);
+        }
+
+        .tabs input[name=tab-control]:nth-of-type(5):checked~.content>section:nth-child(5) {
             display: block;
         }
 
@@ -458,11 +481,13 @@
         <input type="radio" id="tab2" name="tab-control">
         <input type="radio" id="tab3" name="tab-control">
         <input type="radio" id="tab4" name="tab-control">
+        <input type="radio" id="tab5" name="tab-control">
         <ul class="tabs-head">
             <li title="PDFs"><label for="tab1" role="button"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-3d" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"> <path stroke="none" d="M0 0h24v24H0z" fill="none"/> <path d="M14 3v4a1 1 0 0 0 1 1h4" /> <path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" /> <path d="M12 13.5l4 -1.5" /> <path d="M8 11.846l4 1.654v4.5l4 -1.846v-4.308l-4 -1.846z" /> <path d="M8 12v4.2l4 1.8" /> </svg><br><span>PDFs</span></label></li>
             <li title="Links"><label for="tab2" role="button"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"> <path stroke="none" d="M0 0h24v24H0z" fill="none"/> <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" /> <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" /> </svg><br><span>Links</span></label></li>
             <li title="Tools"><label for="tab3" role="button"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-tools" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"> <path stroke="none" d="M0 0h24v24H0z" fill="none"/> <path d="M3 21h4l13 -13a1.5 1.5 0 0 0 -4 -4l-13 13v4" /> <path d="M14.5 5.5l4 4" /> <path d="M12 8l-5 -5l-4 4l5 5" /> <path d="M7 8l-1.5 1.5" /> <path d="M16 12l5 5l-4 4l-5 -5" /> <path d="M16 17l-1.5 1.5" /> </svg><br><span>Tools</span></label></li>
-            <li title="Courses"><label for="tab4" role="button"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-books" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"> <path stroke="none" d="M0 0h24v24H0z" fill="none"/> <path d="M5 4m0 1a1 1 0 0 1 1 -1h2a1 1 0 0 1 1 1v14a1 1 0 0 1 -1 1h-2a1 1 0 0 1 -1 -1z" /> <path d="M9 4m0 1a1 1 0 0 1 1 -1h2a1 1 0 0 1 1 1v14a1 1 0 0 1 -1 1h-2a1 1 0 0 1 -1 -1z" /> <path d="M5 8h4" /> <path d="M9 16h4" /> <path d="M13.803 4.56l2.184 -.53c.562 -.135 1.133 .19 1.282 .732l3.695 13.418a1.02 1.02 0 0 1 -.634 1.219l-.133 .041l-2.184 .53c-.562 .135 -1.133 -.19 -1.282 -.732l-3.695 -13.418a1.02 1.02 0 0 1 .634 -1.219l.133 -.041z" /> <path d="M14 9l4 -1" /> <path d="M16 16l3.923 -.98" /> </svg><br><span>Courses</span></label></li>
+            <li title="Datasets"><label for="tab4" role="button"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-books" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" fill="none" d="M832 64H192c-17.7 0-32 14.3-32 32v832c0 17.7 14.3 32 32 32h640c17.7 0 32-14.3 32-32V96c0-17.7-14.3-32-32-32zm-600 72h560v208H232V136zm560 480H232V408h560v208zm0 272H232V680h560v208zM304 240a40 40 0 1 0 80 0a40 40 0 1 0-80 0zm0 272a40 40 0 1 0 80 0a40 40 0 1 0-80 0zm0 272a40 40 0 1 0 80 0a40 40 0 1 0-80 0z"/></svg><br><span>Datasets</span></label></li>
+            <li title="Courses"><label for="tab5" role="button"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-books" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"> <path stroke="none" d="M0 0h24v24H0z" fill="none"/> <path d="M5 4m0 1a1 1 0 0 1 1 -1h2a1 1 0 0 1 1 1v14a1 1 0 0 1 -1 1h-2a1 1 0 0 1 -1 -1z" /> <path d="M9 4m0 1a1 1 0 0 1 1 -1h2a1 1 0 0 1 1 1v14a1 1 0 0 1 -1 1h-2a1 1 0 0 1 -1 -1z" /> <path d="M5 8h4" /> <path d="M9 16h4" /> <path d="M13.803 4.56l2.184 -.53c.562 -.135 1.133 .19 1.282 .732l3.695 13.418a1.02 1.02 0 0 1 -.634 1.219l-.133 .041l-2.184 .53c-.562 .135 -1.133 -.19 -1.282 -.732l-3.695 -13.418a1.02 1.02 0 0 1 .634 -1.219l.133 -.041z" /> <path d="M14 9l4 -1" /> <path d="M16 16l3.923 -.98" /> </svg><br><span>Courses</span></label></li>
         </ul>
 
         <div class="slider">
@@ -761,6 +786,13 @@
                 </ul>
             </section>
             <section>
+                <h2>Datasets</h2>
+
+                <ul>
+                    <li><a href="https://arxiv.org/abs/1705.02315" target="_blank" rel="nofollow">ChestX-ray8</a> (<a href="https://nihcc.app.box.com/v/ChestXray-NIHCC" target="_blank" rel="nofollow">Download</a>)</li>
+                </ul>
+            </section>
+            <section>
                 <h2>Courses</h2>
 
                 <div class="accordion">
@@ -820,7 +852,8 @@
             if (hashTag == 'pdfs') document.getElementById('tab1').click();
             else if (hashTag == 'links') document.getElementById('tab2').click();
             else if (hashTag == 'tools') document.getElementById('tab3').click();
-            else if (hashTag == 'courses') document.getElementById('tab4').click();
+            else if (hashTag == 'datasets') document.getElementById('tab4').click();
+            else if (hashTag == 'courses') document.getElementById('tab5').click();
         }
         else {
             window.location.hash= '#pdfs';
@@ -833,7 +866,8 @@
             if (tabToggle == 'tab1') window.location.hash= '#pdfs';
             else if (tabToggle == 'tab2') window.location.hash= '#links';
             else if (tabToggle == 'tab3') window.location.hash= '#tools';
-            else if (tabToggle == 'tab4') window.location.hash= '#courses';
+            else if (tabToggle == 'tab4') window.location.hash= '#datasets';
+            else if (tabToggle == 'tab5') window.location.hash= '#courses';
         }
 
         tabs.forEach(item => item.addEventListener('click', toggleTab));
