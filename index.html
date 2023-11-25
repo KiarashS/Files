@@ -202,6 +202,14 @@
             left: 1px;
         }
 
+        .tabs .content section ul li {
+            width: max-content;
+        }
+
+        .tabs .content section ul li.highlight {
+            background-color: #ffff00;
+        }
+
         .tabs input[name=tab-control]:nth-of-type(1):checked~ul>li:nth-child(1)>label {
             cursor: default;
             color: #ff701d;
@@ -790,6 +798,25 @@
 
                 <ul>
                     <li><a href="https://arxiv.org/abs/1705.02315" target="_blank" rel="nofollow">ChestX-ray8</a> (<a href="https://nihcc.app.box.com/v/ChestXray-NIHCC" target="_blank" rel="nofollow">Download</a>)</li>
+                    <li><a href="https://openml.org/" target="_blank" rel="nofollow">OpenML</a></li>
+                    <li><a href="https://www.kaggle.com/datasets" target="_blank" rel="nofollow">kaggle</a></li>
+                    <li><a href="https://paperswithcode.com/datasets" target="_blank" rel="nofollow">Paper With Code</a></li>
+                    <li><a href="https://registry.opendata.aws/" target="_blank" rel="nofollow">Registry of Open Data on AWS</a></li>
+                    <li><a href="https://archive.ics.uci.edu/" target="_blank" rel="nofollow">UC Irvine Machine Learning Repository</a></li>
+                    <li><a href="https://www.tensorflow.org/datasets" target="_blank" rel="nofollow">Tensorflow Datasets</a></li>
+                    <li><a href="http://microsoftopendata.com/" target="_blank" rel="nofollow">Microsoft Open Data</a></li>
+                    <li><a href="https://learn.microsoft.com/en-us/azure/open-datasets/dataset-catalog" target="_blank" rel="nofollow">Azure Open Datasets</a></li>
+                    <li><a href="https://datasetsearch.research.google.com/" target="_blank" rel="nofollow">Google Datasets Search</a></li>
+                    <li><a href="https://cocodataset.org/" target="_blank" rel="nofollow">COCO Dataset</a></li>
+                    <li><a href="https://huggingface.co/datasets" target="_blank" rel="nofollow">Hugging Face Datasets</a></li>
+                    <li><a href="https://www.oasis-brains.org/" target="_blank" rel="nofollow">OASIS Dataset - The Open Access Series of Imaging Studies (brain)</a></li>
+                    <li><a href="https://openneuro.org/" target="_blank" rel="nofollow">MRI, PET, MEG, EEG, and iEEG data</a></li>
+                    <li><a href="https://adni.loni.usc.edu/" target="_blank" rel="nofollow">Alzheimer’s Disease Neuroimaging Initiative</a></li>
+                    <li><a href="https://mimic.mit.edu/" target="_blank" rel="nofollow">Medical Information Mart for Intensive Care (MIMIC Dataset)</a></li>
+                    <li><a href="https://physionet.org/" target="_blank" rel="nofollow">The Research Resource for Complex Physiologic Signals (PhysioNet)</a></li>
+                    <li><a href="https://www.nih.gov/news-events/news-releases/nih-clinical-center-releases-dataset-32000-ct-images" target="_blank" rel="nofollow">32,000 CT images (<a href="https://nihcc.app.box.com/v/DeepLesion" target="_blank" rel="nofollow">Download</a>)</a></li>
+                    <li><a href="https://image-net.org/index.php" target="_blank" rel="nofollow">ImageNet</a></li>
+                    <li><a href="https://nbml.ir/fa/pages/NBML-Free-Databases" target="_blank" rel="nofollow">NBML (<a href="https://nbml.ir/fa/pages/Free-Databases" target="_blank" rel="nofollow">2</a>)</a></li>
                 </ul>
             </section>
             <section>
@@ -846,7 +873,11 @@
         // Hash URL
         var currentUrl= window.location.href;
         if (currentUrl.indexOf('#') > -1) {
-            var hashTag= currentUrl.substring(currentUrl.indexOf('#')+1).toLowerCase();
+            var hashTag = currentUrl.substring(currentUrl.indexOf('#') + 1).toLowerCase();
+            if (currentUrl.indexOf('?h=') > -1) {
+                searchTextIndex = currentUrl.indexOf('?h=');
+                hashTag = currentUrl.substring(currentUrl.indexOf('#') + 1, searchTextIndex).toLowerCase();
+            }
 
             // added: highlight the proper buttons and remove the default "active" element
             if (hashTag == 'pdfs') document.getElementById('tab1').click();
@@ -871,6 +902,23 @@
         }
 
         tabs.forEach(item => item.addEventListener('click', toggleTab));
+
+
+        // Highlight search text
+        if (currentUrl.indexOf('?h=') > -1) {
+            var searchText = decodeURIComponent(currentUrl.substring(currentUrl.indexOf('?h=') + 3));
+
+            var aTags = document.getElementsByTagName("a");
+            var found;
+
+            for (var i = 0; i < aTags.length; i++) {
+                if (aTags[i].textContent == searchText) {
+                    found = aTags[i].parentElement;
+                    break;
+                }
+            }
+            if (found) found.classList.add("highlight");
+        }
     </script>
 </body>
 
