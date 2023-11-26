@@ -919,7 +919,14 @@
                     break;
                 }
             }
-            if (found) found.classList.add("highlight");
+            if (found) {
+                found.classList.add("highlight");
+                document.getElementsByClassName('highlight')[0].scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest',
+                    inline: 'start'
+                });
+            }
         }
     </script>
 </body>
