@@ -21,10 +21,12 @@
         </div>
 	</body>
     <script>
-        var loc = window.location.toString(),
-            params = loc.split('?')[1],
-            iframe = document.getElementById('iframe-viewer');
+        window.onload = function () {
+            var loc = window.location.toString(),
+                params = loc.split('?')[1],
+                iframe = document.getElementById('iframe-viewer');
 
-        iframe.src = iframe.src + '#' + params;
+            iframe.src = iframe.src + '#' + params;
+        }
     </script>
 </html>
