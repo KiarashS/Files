@@ -10,6 +10,15 @@
             .viewer-container {position: absolute; top: 0; left: 0; right: 0; bottom: 0; }
             .viewer-container iframe {display: block; width: 100%; height: 100%; border: none;}
         </style>
+        <script>
+            function iframeDidLoad () {
+                var loc = window.location.toString(),
+                    params = loc.split('?')[1],
+                    iframe = document.getElementById('iframe-viewer');
+    
+                iframe.src = iframe.src + '#' + params;
+            }
+        </script>
 	</head>
 	<body>
         <div class="viewer-container">
@@ -21,13 +30,4 @@
             />
         </div>
 	</body>
-    <script>
-        function iframeDidLoad () {
-            var loc = window.location.toString(),
-                params = loc.split('?')[1],
-                iframe = document.getElementById('iframe-viewer');
-
-            iframe.src = iframe.src + '#' + params;
-        }
-    </script>
 </html>
