@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>English phrasal verbs in use - Advanced</title>
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0">
+
+        <style>
+            body, html {width: 100%; height: 100%; margin: 0; padding: 0}
+            .viewer-container {position: absolute; top: 0; left: 0; right: 0; bottom: 0; }
+            .viewer-container iframe {display: block; width: 100%; height: 100%; border: none;}
+        </style>
+        <script>
+            function iframeDidLoad () {
+                var loc = window.location.toString(),
+                    params = loc.split('?')[1],
+                    iframe = document.getElementById('iframe-viewer');
+    
+                iframe.src = iframe.src + '#' + params;
+            }
+        </script>
+	</head>
+	<body>
+        <div class="viewer-container">
+            <iframe
+                id="iframe-viewer"
+                onload="iframeDidLoad();"
+                src="../../viewer/web/viewer.html?file=..%2F..%2Fassets%2FEnglish-Phrasal-Verbs-in-Use-Advanced.pdf"
+                frameBorder="0"
+            />
+        </div>
+	</body>
+</html>
