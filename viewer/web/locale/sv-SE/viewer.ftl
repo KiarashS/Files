@@ -316,6 +316,9 @@ pdfjs-highlight-floating-button1 =
     .title = Markera
     .aria-label = Markera
 pdfjs-highlight-floating-button-label = Markera
+pdfjs-editor-signature-button =
+    .title = Lägg till signatur
+pdfjs-editor-signature-button-label = Lägg till signatur
 
 ## Remove button for the various kind of editor.
 
@@ -327,6 +330,8 @@ pdfjs-editor-remove-stamp-button =
     .title = Ta bort bild
 pdfjs-editor-remove-highlight-button =
     .title = Ta bort markering
+pdfjs-editor-remove-signature-button =
+    .title = Ta bort signatur
 
 ##
 
@@ -343,6 +348,13 @@ pdfjs-editor-stamp-add-image-button-label = Lägg till bild
 pdfjs-editor-free-highlight-thickness-input = Tjocklek
 pdfjs-editor-free-highlight-thickness-title =
     .title = Ändra tjocklek när du markerar andra objekt än text
+pdfjs-editor-signature-add-signature-button =
+    .title = Lägg till ny signatur
+pdfjs-editor-signature-add-signature-button-label = Lägg till ny signatur
+# .default-content is used as a placeholder in an empty text editor.
+pdfjs-free-text2 =
+    .aria-label = Textredigerare
+    .default-content = Börja skriva…
 pdfjs-free-text =
     .aria-label = Textredigerare
 pdfjs-free-text-default-content = Börja skriva…
@@ -353,8 +365,9 @@ pdfjs-ink-canvas =
 
 ## Alt-text dialog
 
-# Alternative text (alt text) helps when people can't see the image.
 pdfjs-editor-alt-text-button-label = Alternativ text
+pdfjs-editor-alt-text-edit-button =
+    .aria-label = Redigera alternativ text
 pdfjs-editor-alt-text-edit-button-label = Redigera alternativ text
 pdfjs-editor-alt-text-dialog-label = Välj ett alternativ
 pdfjs-editor-alt-text-dialog-description = Alt text (alternativ text) hjälper till när människor inte kan se bilden eller när den inte laddas.
@@ -368,6 +381,9 @@ pdfjs-editor-alt-text-decorative-tooltip = Märkt som dekorativ
 # .placeholder: This is a placeholder for the alt text input area
 pdfjs-editor-alt-text-textarea =
     .placeholder = Till exempel, "En ung man sätter sig vid ett bord för att äta en måltid"
+# Alternative text (alt text) helps when people can't see the image.
+pdfjs-editor-alt-text-button =
+    .aria-label = Alternativ text
 
 ## Editor resizers
 ## This is used in an aria label to help to understand the role of the resizer.
@@ -380,6 +396,22 @@ pdfjs-editor-resizer-label-bottom-right = Nedre högra hörnet — ändra storle
 pdfjs-editor-resizer-label-bottom-middle = Nedre mitten — ändra storlek
 pdfjs-editor-resizer-label-bottom-left = Nedre vänstra hörnet — ändra storlek
 pdfjs-editor-resizer-label-middle-left = Mitten till vänster — ändra storlek
+pdfjs-editor-resizer-top-left =
+    .aria-label = Det övre vänstra hörnet — ändra storlek
+pdfjs-editor-resizer-top-middle =
+    .aria-label = Överst i mitten — ändra storlek
+pdfjs-editor-resizer-top-right =
+    .aria-label = Det övre högra hörnet — ändra storlek
+pdfjs-editor-resizer-middle-right =
+    .aria-label = Mitten höger — ändra storlek
+pdfjs-editor-resizer-bottom-right =
+    .aria-label = Nedre högra hörnet — ändra storlek
+pdfjs-editor-resizer-bottom-middle =
+    .aria-label = Nedre mitten — ändra storlek
+pdfjs-editor-resizer-bottom-left =
+    .aria-label = Nedre vänstra hörnet — ändra storlek
+pdfjs-editor-resizer-middle-left =
+    .aria-label = Mitten till vänster — ändra storlek
 
 ## Color picker
 
@@ -433,10 +465,16 @@ pdfjs-editor-new-alt-text-error-close-button = Stäng
 pdfjs-editor-new-alt-text-ai-model-downloading-progress = Hämtar AI-modell med alternativ text ({ $downloadedSize } av { $totalSize } MB)
     .aria-valuetext = Hämtar AI-modell med alternativ text ({ $downloadedSize } av { $totalSize } MB)
 # This is a button that users can click to edit the alt text they have already added.
+pdfjs-editor-new-alt-text-added-button =
+    .aria-label = Alternativ text tillagd
 pdfjs-editor-new-alt-text-added-button-label = Alternativ text tillagd
 # This is a button that users can click to open the alt text editor and add alt text when it is not present.
+pdfjs-editor-new-alt-text-missing-button =
+    .aria-label = Saknar alternativ text
 pdfjs-editor-new-alt-text-missing-button-label = Saknar alternativ text
 # This is a button that opens up the alt text modal where users should review the alt text that was automatically generated.
+pdfjs-editor-new-alt-text-to-review-button =
+    .aria-label = Granska alternativ text
 pdfjs-editor-new-alt-text-to-review-button-label = Granska alternativ text
 # "Created automatically" is a prefix that will be added to the beginning of any alt text that has been automatically generated. After the colon, the user will see/hear the actual alt text description. If the alt text has been edited by a human, this prefix will not appear.
 # Variables:
@@ -463,3 +501,93 @@ pdfjs-editor-alt-text-settings-editor-title = Alternativ textredigerare
 pdfjs-editor-alt-text-settings-show-dialog-button-label = Visa alternativ textredigerare direkt när du lägger till en bild
 pdfjs-editor-alt-text-settings-show-dialog-description = Hjälper dig att se till att alla dina bilder har alternativ text.
 pdfjs-editor-alt-text-settings-close-button = Stäng
+
+## "Annotations removed" bar
+
+pdfjs-editor-undo-bar-message-highlight = Markering borttagen
+pdfjs-editor-undo-bar-message-freetext = Text borttagen
+pdfjs-editor-undo-bar-message-ink = Ritning borttagen
+pdfjs-editor-undo-bar-message-stamp = Bild borttagen
+pdfjs-editor-undo-bar-message-signature = Signatur borttagen
+# Variables:
+#   $count (Number) - the number of removed annotations.
+pdfjs-editor-undo-bar-message-multiple =
+    { $count ->
+        [one] { $count } anteckning har tagits bort
+       *[other] { $count } anteckningar har tagits bort
+    }
+pdfjs-editor-undo-bar-undo-button =
+    .title = Ångra
+pdfjs-editor-undo-bar-undo-button-label = Ångra
+pdfjs-editor-undo-bar-close-button =
+    .title = Stäng
+pdfjs-editor-undo-bar-close-button-label = Stäng
+
+## Add a signature dialog
+
+pdfjs-editor-add-signature-dialog-label = Denna modal tillåter användaren att skapa en signatur för att lägga till i ett PDF-dokument. Användaren kan redigera namnet (som också fungerar som alternativ text) och eventuellt spara signaturen för upprepad användning.
+pdfjs-editor-add-signature-dialog-title = Lägg till en signatur
+
+## Tab names
+
+# Type is a verb (you can type your name as signature)
+pdfjs-editor-add-signature-type-button = Typ
+    .title = Typ
+# Draw is a verb (you can draw your signature)
+pdfjs-editor-add-signature-draw-button = Rita
+    .title = Rita
+pdfjs-editor-add-signature-image-button = Bild
+    .title = Bild
+
+## Tab panels
+
+pdfjs-editor-add-signature-type-input =
+    .aria-label = Skriv din signatur
+    .placeholder = Skriv din signatur
+pdfjs-editor-add-signature-draw-placeholder = Rita din signatur
+pdfjs-editor-add-signature-draw-thickness-range-label = Tjocklek
+# Variables:
+#   $thickness (Number) - the thickness (in pixels) of the line used to draw a signature.
+pdfjs-editor-add-signature-draw-thickness-range =
+    .title = Ritningstjocklek: { $thickness }
+pdfjs-editor-add-signature-image-placeholder = Dra en fil hit för att ladda upp
+pdfjs-editor-add-signature-image-browse-link =
+    { PLATFORM() ->
+        [macos] Eller välj bildfiler
+       *[other] Eller bläddra bland bildfiler
+    }
+
+## Controls
+
+pdfjs-editor-add-signature-description-label = Beskrivning (alternativ text)
+pdfjs-editor-add-signature-description-input =
+    .title = Beskrivning (alternativ text)
+pdfjs-editor-add-signature-description-default-when-drawing = Signatur
+pdfjs-editor-add-signature-clear-button-label = Rensa signatur
+pdfjs-editor-add-signature-clear-button =
+    .title = Rensa signatur
+pdfjs-editor-add-signature-save-checkbox = Spara signatur
+pdfjs-editor-add-signature-save-warning-message = Du har nått gränsen på 5 sparade signaturer. Ta bort en för att spara fler.
+pdfjs-editor-add-signature-image-upload-error-title = Det gick inte att ladda upp bilden
+pdfjs-editor-add-signature-image-upload-error-description = Kontrollera din nätverksanslutning eller försök med en annan bild.
+pdfjs-editor-add-signature-error-close-button = Stäng
+
+## Dialog buttons
+
+pdfjs-editor-add-signature-cancel-button = Avbryt
+pdfjs-editor-add-signature-add-button = Lägg till
+pdfjs-editor-edit-signature-update-button = Uppdatera
+
+## Main menu for adding/removing signatures
+
+pdfjs-editor-delete-signature-button =
+    .title = Ta bort signatur
+pdfjs-editor-delete-signature-button-label = Ta bort signatur
+
+## Editor toolbar
+
+pdfjs-editor-add-signature-edit-button-label = Redigera beskrivning
+
+## Edit signature description dialog
+
+pdfjs-editor-edit-signature-dialog-title = Redigera beskrivning

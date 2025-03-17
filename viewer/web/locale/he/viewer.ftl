@@ -293,7 +293,7 @@ pdfjs-annotation-date-time-string = { DATETIME($dateObj, dateStyle: "short", tim
 ## Password
 
 pdfjs-password-label = נא להכניס את הססמה לפתיחת קובץ PDF זה.
-pdfjs-password-invalid = ססמה שגויה. נא לנסות שנית.
+pdfjs-password-invalid = ססמה שגויה. נא לנסות שוב.
 pdfjs-password-ok-button = אישור
 pdfjs-password-cancel-button = ביטול
 pdfjs-web-fonts-disabled = גופני רשת מנוטרלים: לא ניתן להשתמש בגופני PDF מוטבעים.
@@ -316,6 +316,9 @@ pdfjs-highlight-floating-button1 =
     .title = סימון
     .aria-label = סימון
 pdfjs-highlight-floating-button-label = סימון
+pdfjs-editor-signature-button =
+    .title = הוספת חתימה
+pdfjs-editor-signature-button-label = הוספת חתימה
 
 ## Remove button for the various kind of editor.
 
@@ -326,7 +329,9 @@ pdfjs-editor-remove-freetext-button =
 pdfjs-editor-remove-stamp-button =
     .title = הסרת תמונה
 pdfjs-editor-remove-highlight-button =
-    .title = הסרת הדגשה
+    .title = הסרת סימון
+pdfjs-editor-remove-signature-button =
+    .title = הסרת חתימה
 
 ##
 
@@ -342,7 +347,14 @@ pdfjs-editor-stamp-add-image-button-label = הוספת תמונה
 # This refers to the thickness of the line used for free highlighting (not bound to text)
 pdfjs-editor-free-highlight-thickness-input = עובי
 pdfjs-editor-free-highlight-thickness-title =
-    .title = שינוי עובי בעת הדגשת פריטים שאינם טקסט
+    .title = שינוי עובי בעת סימון פריטים שאינם טקסט
+pdfjs-editor-signature-add-signature-button =
+    .title = הוספת חתימה חדשה
+pdfjs-editor-signature-add-signature-button-label = הוספת חתימה חדשה
+# .default-content is used as a placeholder in an empty text editor.
+pdfjs-free-text2 =
+    .aria-label = עורך טקסט
+    .default-content = נא להתחיל להקליד…
 pdfjs-free-text =
     .aria-label = עורך טקסט
 pdfjs-free-text-default-content = להתחיל להקליד…
@@ -353,8 +365,9 @@ pdfjs-ink-canvas =
 
 ## Alt-text dialog
 
-# Alternative text (alt text) helps when people can't see the image.
 pdfjs-editor-alt-text-button-label = טקסט חלופי
+pdfjs-editor-alt-text-edit-button =
+    .aria-label = עריכת טקסט חלופי
 pdfjs-editor-alt-text-edit-button-label = עריכת טקסט חלופי
 pdfjs-editor-alt-text-dialog-label = בחירת אפשרות
 pdfjs-editor-alt-text-dialog-description = טקסט חלופי עוזר כשאנשים לא יכולים לראות את התמונה או כשהיא לא נטענת.
@@ -368,6 +381,9 @@ pdfjs-editor-alt-text-decorative-tooltip = מסומן כדקורטיבי
 # .placeholder: This is a placeholder for the alt text input area
 pdfjs-editor-alt-text-textarea =
     .placeholder = לדוגמה, ״גבר צעיר מתיישב ליד שולחן לאכול ארוחה״
+# Alternative text (alt text) helps when people can't see the image.
+pdfjs-editor-alt-text-button =
+    .aria-label = טקסט חלופי
 
 ## Editor resizers
 ## This is used in an aria label to help to understand the role of the resizer.
@@ -380,11 +396,27 @@ pdfjs-editor-resizer-label-bottom-right = פינה ימנית תחתונה - ש�
 pdfjs-editor-resizer-label-bottom-middle = למטה באמצע - שינוי גודל
 pdfjs-editor-resizer-label-bottom-left = פינה שמאלית תחתונה - שינוי גודל
 pdfjs-editor-resizer-label-middle-left = שמאלה באמצע - שינוי גודל
+pdfjs-editor-resizer-top-left =
+    .aria-label = פינה שמאלית עליונה - שינוי גודל
+pdfjs-editor-resizer-top-middle =
+    .aria-label = למעלה באמצע - שינוי גודל
+pdfjs-editor-resizer-top-right =
+    .aria-label = פינה ימנית עליונה - שינוי גודל
+pdfjs-editor-resizer-middle-right =
+    .aria-label = ימינה באמצע - שינוי גודל
+pdfjs-editor-resizer-bottom-right =
+    .aria-label = פינה ימנית תחתונה - שינוי גודל
+pdfjs-editor-resizer-bottom-middle =
+    .aria-label = למטה באמצע - שינוי גודל
+pdfjs-editor-resizer-bottom-left =
+    .aria-label = פינה שמאלית תחתונה - שינוי גודל
+pdfjs-editor-resizer-middle-left =
+    .aria-label = שמאלה באמצע - שינוי גודל
 
 ## Color picker
 
 # This means "Color used to highlight text"
-pdfjs-editor-highlight-colorpicker-label = צבע הדגשה
+pdfjs-editor-highlight-colorpicker-label = צבע סימון
 pdfjs-editor-colorpicker-button =
     .title = שינוי צבע
 pdfjs-editor-colorpicker-dropdown =
@@ -433,10 +465,16 @@ pdfjs-editor-new-alt-text-error-close-button = סגירה
 pdfjs-editor-new-alt-text-ai-model-downloading-progress = בתהליך הורדת מודל AI של טקסט חלופי ({ $downloadedSize } מתוך { $totalSize } מ״ב)
     .aria-valuetext = בתהליך הורדת מודל AI של טקסט חלופי ({ $downloadedSize } מתוך { $totalSize } מ״ב)
 # This is a button that users can click to edit the alt text they have already added.
-pdfjs-editor-new-alt-text-added-button-label = טקסט חלופי נוסף
+pdfjs-editor-new-alt-text-added-button =
+    .aria-label = נוסף טקסט חלופי
+pdfjs-editor-new-alt-text-added-button-label = נוסף טקסט חלופי
 # This is a button that users can click to open the alt text editor and add alt text when it is not present.
+pdfjs-editor-new-alt-text-missing-button =
+    .aria-label = חסר טקסט חלופי
 pdfjs-editor-new-alt-text-missing-button-label = חסר טקסט חלופי
 # This is a button that opens up the alt text modal where users should review the alt text that was automatically generated.
+pdfjs-editor-new-alt-text-to-review-button =
+    .aria-label = סקירת טקסט חלופי
 pdfjs-editor-new-alt-text-to-review-button-label = סקירת טקסט חלופי
 # "Created automatically" is a prefix that will be added to the beginning of any alt text that has been automatically generated. After the colon, the user will see/hear the actual alt text description. If the alt text has been edited by a human, this prefix will not appear.
 # Variables:
@@ -463,3 +501,93 @@ pdfjs-editor-alt-text-settings-editor-title = עורך טקסט חלופי
 pdfjs-editor-alt-text-settings-show-dialog-button-label = הצגת עורך טקסט חלופי מיד בעת הוספת תמונה
 pdfjs-editor-alt-text-settings-show-dialog-description = מסייע לך לוודא שלכל התמונות שלך יש טקסט חלופי.
 pdfjs-editor-alt-text-settings-close-button = סגירה
+
+## "Annotations removed" bar
+
+pdfjs-editor-undo-bar-message-highlight = הסימון הוסר
+pdfjs-editor-undo-bar-message-freetext = הטקסט הוסר
+pdfjs-editor-undo-bar-message-ink = הציור הוסר
+pdfjs-editor-undo-bar-message-stamp = התמונה הוסרה
+pdfjs-editor-undo-bar-message-signature = החתימה הוסרה
+# Variables:
+#   $count (Number) - the number of removed annotations.
+pdfjs-editor-undo-bar-message-multiple =
+    { $count ->
+        [one] הערה אחת הוסרה
+       *[other] { $count } הערות הוסרו
+    }
+pdfjs-editor-undo-bar-undo-button =
+    .title = ביטול פעולה
+pdfjs-editor-undo-bar-undo-button-label = ביטול פעלה
+pdfjs-editor-undo-bar-close-button =
+    .title = סגירה
+pdfjs-editor-undo-bar-close-button-label = סגירה
+
+## Add a signature dialog
+
+pdfjs-editor-add-signature-dialog-label = מודל זה מאפשר למשתמש ליצור חתימה להוספה למסמך PDF. המשתמש יכול לערוך את השם (שמשמש גם כטקסט האלטרנטיבי), ובאופן אופציונלי לשמור את החתימה לשימוש חוזר.
+pdfjs-editor-add-signature-dialog-title = הוספת חתימה
+
+## Tab names
+
+# Type is a verb (you can type your name as signature)
+pdfjs-editor-add-signature-type-button = הקלדה
+    .title = הקלדה
+# Draw is a verb (you can draw your signature)
+pdfjs-editor-add-signature-draw-button = ציור
+    .title = ציור
+pdfjs-editor-add-signature-image-button = תמונה
+    .title = תמונה
+
+## Tab panels
+
+pdfjs-editor-add-signature-type-input =
+    .aria-label = נא להקליד את החתימה שלך
+    .placeholder = נא להקליד את החתימה שלך
+pdfjs-editor-add-signature-draw-placeholder = נא לצייר את החתימה שלך
+pdfjs-editor-add-signature-draw-thickness-range-label = עובי
+# Variables:
+#   $thickness (Number) - the thickness (in pixels) of the line used to draw a signature.
+pdfjs-editor-add-signature-draw-thickness-range =
+    .title = עובי הציור: { $thickness }
+pdfjs-editor-add-signature-image-placeholder = יש לגרור לכאן קובץ להעלאה
+pdfjs-editor-add-signature-image-browse-link =
+    { PLATFORM() ->
+        [macos] או לבחור בקובצי תמונה
+       *[other] או לעיין בקובצי תמונה
+    }
+
+## Controls
+
+pdfjs-editor-add-signature-description-label = תיאור (טקסט חלופי)
+pdfjs-editor-add-signature-description-input =
+    .title = תיאור (טקסט חלופי)
+pdfjs-editor-add-signature-description-default-when-drawing = חתימה
+pdfjs-editor-add-signature-clear-button-label = ניקוי חתימה
+pdfjs-editor-add-signature-clear-button =
+    .title = ניקוי חתימה
+pdfjs-editor-add-signature-save-checkbox = שמירת החתימה
+pdfjs-editor-add-signature-save-warning-message = הגעת למגבלה של 5 חתימות שמורות. יש להסיר אחד כדי לשמור עוד.
+pdfjs-editor-add-signature-image-upload-error-title = לא ניתן להעלות את התמונה
+pdfjs-editor-add-signature-image-upload-error-description = נא לבדוק את החיבור שלך לרשת או לנסות תמונה אחרת.
+pdfjs-editor-add-signature-error-close-button = סגירה
+
+## Dialog buttons
+
+pdfjs-editor-add-signature-cancel-button = ביטול
+pdfjs-editor-add-signature-add-button = הוספה
+pdfjs-editor-edit-signature-update-button = עדכון
+
+## Main menu for adding/removing signatures
+
+pdfjs-editor-delete-signature-button =
+    .title = הסרת חתימה
+pdfjs-editor-delete-signature-button-label = הסרת חתימה
+
+## Editor toolbar
+
+pdfjs-editor-add-signature-edit-button-label = עריכת תיאור
+
+## Edit signature description dialog
+
+pdfjs-editor-edit-signature-dialog-title = עריכת תיאור

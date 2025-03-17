@@ -308,6 +308,9 @@ pdfjs-highlight-floating-button1 =
     .title = 강조 표시
     .aria-label = 강조 표시
 pdfjs-highlight-floating-button-label = 강조 표시
+pdfjs-editor-signature-button =
+    .title = 서명 추가
+pdfjs-editor-signature-button-label = 서명 추가
 
 ## Remove button for the various kind of editor.
 
@@ -319,6 +322,8 @@ pdfjs-editor-remove-stamp-button =
     .title = 이미지 제거
 pdfjs-editor-remove-highlight-button =
     .title = 강조 표시 제거
+pdfjs-editor-remove-signature-button =
+    .title = 서명 제거
 
 ##
 
@@ -335,6 +340,13 @@ pdfjs-editor-stamp-add-image-button-label = 이미지 추가
 pdfjs-editor-free-highlight-thickness-input = 두께
 pdfjs-editor-free-highlight-thickness-title =
     .title = 텍스트 이외의 항목을 강조 표시할 때 두께 변경
+pdfjs-editor-signature-add-signature-button =
+    .title = 새 서명 추가
+pdfjs-editor-signature-add-signature-button-label = 새 서명 추가
+# .default-content is used as a placeholder in an empty text editor.
+pdfjs-free-text2 =
+    .aria-label = 텍스트 편집기
+    .default-content = 입력을 시작하세요…
 pdfjs-free-text =
     .aria-label = 텍스트 편집기
 pdfjs-free-text-default-content = 입력하세요…
@@ -345,8 +357,9 @@ pdfjs-ink-canvas =
 
 ## Alt-text dialog
 
-# Alternative text (alt text) helps when people can't see the image.
 pdfjs-editor-alt-text-button-label = 대체 텍스트
+pdfjs-editor-alt-text-edit-button =
+    .aria-label = 대체 텍스트 편집
 pdfjs-editor-alt-text-edit-button-label = 대체 텍스트 편집
 pdfjs-editor-alt-text-dialog-label = 옵션을 선택하세요
 pdfjs-editor-alt-text-dialog-description = 대체 텍스트는 사람들이 이미지를 볼 수 없거나 이미지가 로드되지 않을 때 도움이 됩니다.
@@ -360,6 +373,9 @@ pdfjs-editor-alt-text-decorative-tooltip = 장식용으로 표시됨
 # .placeholder: This is a placeholder for the alt text input area
 pdfjs-editor-alt-text-textarea =
     .placeholder = 예를 들어, “한 청년이 식탁에 앉아 식사를 하고 있습니다.”
+# Alternative text (alt text) helps when people can't see the image.
+pdfjs-editor-alt-text-button =
+    .aria-label = 대체 텍스트
 
 ## Editor resizers
 ## This is used in an aria label to help to understand the role of the resizer.
@@ -372,6 +388,22 @@ pdfjs-editor-resizer-label-bottom-right = 오른쪽 아래 - 크기 조정
 pdfjs-editor-resizer-label-bottom-middle = 가운데 아래 — 크기 조정
 pdfjs-editor-resizer-label-bottom-left = 왼쪽 아래 - 크기 조정
 pdfjs-editor-resizer-label-middle-left = 왼쪽 가운데 — 크기 조정
+pdfjs-editor-resizer-top-left =
+    .aria-label = 왼쪽 위 — 크기 조정
+pdfjs-editor-resizer-top-middle =
+    .aria-label = 가운데 위 - 크기 조정
+pdfjs-editor-resizer-top-right =
+    .aria-label = 오른쪽 위 — 크기 조정
+pdfjs-editor-resizer-middle-right =
+    .aria-label = 오른쪽 가운데 — 크기 조정
+pdfjs-editor-resizer-bottom-right =
+    .aria-label = 오른쪽 아래 - 크기 조정
+pdfjs-editor-resizer-bottom-middle =
+    .aria-label = 가운데 아래 — 크기 조정
+pdfjs-editor-resizer-bottom-left =
+    .aria-label = 왼쪽 아래 - 크기 조정
+pdfjs-editor-resizer-middle-left =
+    .aria-label = 왼쪽 가운데 — 크기 조정
 
 ## Color picker
 
@@ -425,10 +457,16 @@ pdfjs-editor-new-alt-text-error-close-button = 닫기
 pdfjs-editor-new-alt-text-ai-model-downloading-progress = 대체 텍스트 AI 모델 다운로드 중 ({ $downloadedSize } / { $totalSize } MB)
     .aria-valuetext = 대체 텍스트 AI 모델 다운로드 중 ({ $downloadedSize } / { $totalSize } MB)
 # This is a button that users can click to edit the alt text they have already added.
+pdfjs-editor-new-alt-text-added-button =
+    .aria-label = 대체 텍스트 추가됨
 pdfjs-editor-new-alt-text-added-button-label = 대체 텍스트 추가됨
 # This is a button that users can click to open the alt text editor and add alt text when it is not present.
+pdfjs-editor-new-alt-text-missing-button =
+    .aria-label = 대체 텍스트 누락
 pdfjs-editor-new-alt-text-missing-button-label = 대체 텍스트 누락
 # This is a button that opens up the alt text modal where users should review the alt text that was automatically generated.
+pdfjs-editor-new-alt-text-to-review-button =
+    .aria-label = 대체 텍스트 검토
 pdfjs-editor-new-alt-text-to-review-button-label = 대체 텍스트 검토
 # "Created automatically" is a prefix that will be added to the beginning of any alt text that has been automatically generated. After the colon, the user will see/hear the actual alt text description. If the alt text has been edited by a human, this prefix will not appear.
 # Variables:
@@ -455,3 +493,89 @@ pdfjs-editor-alt-text-settings-editor-title = 대체 텍스트 편집기
 pdfjs-editor-alt-text-settings-show-dialog-button-label = 이미지 추가 시 바로 대체 텍스트 편집기 표시
 pdfjs-editor-alt-text-settings-show-dialog-description = 모든 이미지에 대체 텍스트가 있는지 확인하는 데 도움이 됩니다.
 pdfjs-editor-alt-text-settings-close-button = 닫기
+
+## "Annotations removed" bar
+
+pdfjs-editor-undo-bar-message-highlight = 강조 표시 제거됨
+pdfjs-editor-undo-bar-message-freetext = 텍스트 제거됨
+pdfjs-editor-undo-bar-message-ink = 그리기 제거됨
+pdfjs-editor-undo-bar-message-stamp = 이미지 제거됨
+pdfjs-editor-undo-bar-message-signature = 서명 제거됨
+# Variables:
+#   $count (Number) - the number of removed annotations.
+pdfjs-editor-undo-bar-message-multiple = 주석 { $count }개 제거됨
+pdfjs-editor-undo-bar-undo-button =
+    .title = 실행 취소
+pdfjs-editor-undo-bar-undo-button-label = 실행 취소
+pdfjs-editor-undo-bar-close-button =
+    .title = 닫기
+pdfjs-editor-undo-bar-close-button-label = 닫기
+
+## Add a signature dialog
+
+pdfjs-editor-add-signature-dialog-label = 이 모달로 PDF 문서에 추가 할 서명을 만들 수 있습니다. 사용자는 이름(대체 텍스트 역할도 함)을 편집하고, 반복해 사용할 수 있도록 서명을 저장할 수도 있습니다.
+pdfjs-editor-add-signature-dialog-title = 서명 추가
+
+## Tab names
+
+# Type is a verb (you can type your name as signature)
+pdfjs-editor-add-signature-type-button = 입력
+    .title = 입력
+# Draw is a verb (you can draw your signature)
+pdfjs-editor-add-signature-draw-button = 그리기
+    .title = 그리기
+pdfjs-editor-add-signature-image-button = 이미지
+    .title = 이미지
+
+## Tab panels
+
+pdfjs-editor-add-signature-type-input =
+    .aria-label = 서명 입력
+    .placeholder = 서명 입력
+pdfjs-editor-add-signature-draw-placeholder = 서명 그리기
+pdfjs-editor-add-signature-draw-thickness-range-label = 두께
+# Variables:
+#   $thickness (Number) - the thickness (in pixels) of the line used to draw a signature.
+pdfjs-editor-add-signature-draw-thickness-range =
+    .title = 그리기 두께: { $thickness }
+pdfjs-editor-add-signature-image-placeholder = 업로드할 파일을 여기로 끌어서 놓기
+pdfjs-editor-add-signature-image-browse-link =
+    { PLATFORM() ->
+        [macos] 또는 이미지 파일 찾아보기
+       *[other] 또는 이미지 파일 찾아보기
+    }
+
+## Controls
+
+pdfjs-editor-add-signature-description-label = 설명 (대체 텍스트)
+pdfjs-editor-add-signature-description-input =
+    .title = 설명 (대체 텍스트)
+pdfjs-editor-add-signature-description-default-when-drawing = 서명
+pdfjs-editor-add-signature-clear-button-label = 서명 지우기
+pdfjs-editor-add-signature-clear-button =
+    .title = 서명 지우기
+pdfjs-editor-add-signature-save-checkbox = 서명 저장
+pdfjs-editor-add-signature-save-warning-message = 저장된 서명의 한계에 도달했습니다. 더 저장하려면 하나를 제거하세요.
+pdfjs-editor-add-signature-image-upload-error-title = 이미지를 업로드할 수 없음
+pdfjs-editor-add-signature-image-upload-error-description = 네트워크 연결을 확인하거나 다른 이미지로 시도하세요.
+pdfjs-editor-add-signature-error-close-button = 닫기
+
+## Dialog buttons
+
+pdfjs-editor-add-signature-cancel-button = 취소
+pdfjs-editor-add-signature-add-button = 추가
+pdfjs-editor-edit-signature-update-button = 업데이트
+
+## Main menu for adding/removing signatures
+
+pdfjs-editor-delete-signature-button =
+    .title = 서명 제거
+pdfjs-editor-delete-signature-button-label = 서명 제거
+
+## Editor toolbar
+
+pdfjs-editor-add-signature-edit-button-label = 설명 편집
+
+## Edit signature description dialog
+
+pdfjs-editor-edit-signature-dialog-title = 설명 편집

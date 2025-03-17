@@ -316,6 +316,9 @@ pdfjs-highlight-floating-button1 =
     .title = Kiemelés
     .aria-label = Kiemelés
 pdfjs-highlight-floating-button-label = Kiemelés
+pdfjs-editor-signature-button =
+    .title = Aláírás hozzáadása
+pdfjs-editor-signature-button-label = Aláírás hozzáadása
 
 ## Remove button for the various kind of editor.
 
@@ -327,6 +330,8 @@ pdfjs-editor-remove-stamp-button =
     .title = Kép eltávolítása
 pdfjs-editor-remove-highlight-button =
     .title = Kiemelés eltávolítása
+pdfjs-editor-remove-signature-button =
+    .title = Aláírás eltávolítása
 
 ##
 
@@ -343,6 +348,13 @@ pdfjs-editor-stamp-add-image-button-label = Kép hozzáadása
 pdfjs-editor-free-highlight-thickness-input = Vastagság
 pdfjs-editor-free-highlight-thickness-title =
     .title = Vastagság módosítása, ha nem szöveges elemeket emel ki
+pdfjs-editor-signature-add-signature-button =
+    .title = Új aláírás hozzáadása
+pdfjs-editor-signature-add-signature-button-label = Új aláírás hozzáadása
+# .default-content is used as a placeholder in an empty text editor.
+pdfjs-free-text2 =
+    .aria-label = Szövegszerkesztő
+    .default-content = Kezdjen gépelni…
 pdfjs-free-text =
     .aria-label = Szövegszerkesztő
 pdfjs-free-text-default-content = Kezdjen el gépelni…
@@ -353,8 +365,9 @@ pdfjs-ink-canvas =
 
 ## Alt-text dialog
 
-# Alternative text (alt text) helps when people can't see the image.
 pdfjs-editor-alt-text-button-label = Alternatív szöveg
+pdfjs-editor-alt-text-edit-button =
+    .aria-label = Alternatív szöveg szerkesztése
 pdfjs-editor-alt-text-edit-button-label = Alternatív szöveg szerkesztése
 pdfjs-editor-alt-text-dialog-label = Válasszon egy lehetőséget
 pdfjs-editor-alt-text-dialog-description = Az alternatív szöveg segít, ha az emberek nem látják a képet, vagy ha az nem töltődik be.
@@ -368,6 +381,9 @@ pdfjs-editor-alt-text-decorative-tooltip = Megjelölve dekoratívként
 # .placeholder: This is a placeholder for the alt text input area
 pdfjs-editor-alt-text-textarea =
     .placeholder = Például: „Egy fiatal férfi leül enni egy asztalhoz”
+# Alternative text (alt text) helps when people can't see the image.
+pdfjs-editor-alt-text-button =
+    .aria-label = Alternatív szöveg
 
 ## Editor resizers
 ## This is used in an aria label to help to understand the role of the resizer.
@@ -380,6 +396,22 @@ pdfjs-editor-resizer-label-bottom-right = Jobb alsó sarok – átméretezés
 pdfjs-editor-resizer-label-bottom-middle = Alul középen – átméretezés
 pdfjs-editor-resizer-label-bottom-left = Bal alsó sarok – átméretezés
 pdfjs-editor-resizer-label-middle-left = Balra középen – átméretezés
+pdfjs-editor-resizer-top-left =
+    .aria-label = Bal felső sarok – átméretezés
+pdfjs-editor-resizer-top-middle =
+    .aria-label = Felül középen – átméretezés
+pdfjs-editor-resizer-top-right =
+    .aria-label = Jobb felső sarok – átméretezés
+pdfjs-editor-resizer-middle-right =
+    .aria-label = Jobbra középen – átméretezés
+pdfjs-editor-resizer-bottom-right =
+    .aria-label = Jobb alsó sarok – átméretezés
+pdfjs-editor-resizer-bottom-middle =
+    .aria-label = Alul középen – átméretezés
+pdfjs-editor-resizer-bottom-left =
+    .aria-label = Bal alsó sarok – átméretezés
+pdfjs-editor-resizer-middle-left =
+    .aria-label = Balra középen – átméretezés
 
 ## Color picker
 
@@ -433,10 +465,16 @@ pdfjs-editor-new-alt-text-error-close-button = Bezárás
 pdfjs-editor-new-alt-text-ai-model-downloading-progress = Alternatív szöveg MI modell letöltése ({ $downloadedSize } / { $totalSize } MB)
     .aria-valuetext = Alternatív szöveg MI modell letöltése ({ $downloadedSize } / { $totalSize } MB)
 # This is a button that users can click to edit the alt text they have already added.
+pdfjs-editor-new-alt-text-added-button =
+    .aria-label = Alternatív szöveg hozzáadva
 pdfjs-editor-new-alt-text-added-button-label = Alternatív szöveg hozzáadva
 # This is a button that users can click to open the alt text editor and add alt text when it is not present.
+pdfjs-editor-new-alt-text-missing-button =
+    .aria-label = Hiányzó alternatív szöveg
 pdfjs-editor-new-alt-text-missing-button-label = Hiányzó alternatív szöveg
 # This is a button that opens up the alt text modal where users should review the alt text that was automatically generated.
+pdfjs-editor-new-alt-text-to-review-button =
+    .aria-label = Alternatív szöveg áttekintése
 pdfjs-editor-new-alt-text-to-review-button-label = Alternatív szöveg szerkesztése
 # "Created automatically" is a prefix that will be added to the beginning of any alt text that has been automatically generated. After the colon, the user will see/hear the actual alt text description. If the alt text has been edited by a human, this prefix will not appear.
 # Variables:
@@ -463,3 +501,93 @@ pdfjs-editor-alt-text-settings-editor-title = Alternatív szöveg szerkesztője
 pdfjs-editor-alt-text-settings-show-dialog-button-label = Az alternatív szöveg szerkesztőjének azonnali megjelenítése egy kép hozzáadásakor
 pdfjs-editor-alt-text-settings-show-dialog-description = Segít elérni, hogy az összes képén legyen alternatív szöveg.
 pdfjs-editor-alt-text-settings-close-button = Bezárás
+
+## "Annotations removed" bar
+
+pdfjs-editor-undo-bar-message-highlight = Kiemelés eltávolítva
+pdfjs-editor-undo-bar-message-freetext = Szöveg eltávolítva
+pdfjs-editor-undo-bar-message-ink = Rajz eltávolítva
+pdfjs-editor-undo-bar-message-stamp = Kép eltávolítva
+pdfjs-editor-undo-bar-message-signature = Aláírás eltávolítva
+# Variables:
+#   $count (Number) - the number of removed annotations.
+pdfjs-editor-undo-bar-message-multiple =
+    { $count ->
+        [one] { $count } kommentár eltávolítva
+       *[other] { $count } kommentár eltávolítva
+    }
+pdfjs-editor-undo-bar-undo-button =
+    .title = Visszavonás
+pdfjs-editor-undo-bar-undo-button-label = Visszavonás
+pdfjs-editor-undo-bar-close-button =
+    .title = Bezárás
+pdfjs-editor-undo-bar-close-button-label = Bezárás
+
+## Add a signature dialog
+
+pdfjs-editor-add-signature-dialog-label = Ez a mód lehetővé teszi a felhasználónak, hogy aláírást hozzon létre, és ezt egy PDF dokumentumhoz adja. A felhasználó szerkesztheti a nevet (ez egyben alternatív szövegként is szolgál), és ismételt felhasználás céljából tetszés szerint mentheti az aláírást.
+pdfjs-editor-add-signature-dialog-title = Aláírás hozzáadása
+
+## Tab names
+
+# Type is a verb (you can type your name as signature)
+pdfjs-editor-add-signature-type-button = Beírás
+    .title = Beírás
+# Draw is a verb (you can draw your signature)
+pdfjs-editor-add-signature-draw-button = Rajzolás
+    .title = Rajzolás
+pdfjs-editor-add-signature-image-button = Kép
+    .title = Kép
+
+## Tab panels
+
+pdfjs-editor-add-signature-type-input =
+    .aria-label = Írja be az aláírását
+    .placeholder = Írja be az aláírását
+pdfjs-editor-add-signature-draw-placeholder = Rajzolja le az aláírását
+pdfjs-editor-add-signature-draw-thickness-range-label = Vastagság
+# Variables:
+#   $thickness (Number) - the thickness (in pixels) of the line used to draw a signature.
+pdfjs-editor-add-signature-draw-thickness-range =
+    .title = Rajzolási vastagság: { $thickness }
+pdfjs-editor-add-signature-image-placeholder = Húzzon ide egy fájlt a feltöltéshez
+pdfjs-editor-add-signature-image-browse-link =
+    { PLATFORM() ->
+        [macos] Vagy tallózzon a képfájlok között
+       *[other] Vagy tallózzon a képfájlok között
+    }
+
+## Controls
+
+pdfjs-editor-add-signature-description-label = Leírás (alternatív szöveg)
+pdfjs-editor-add-signature-description-input =
+    .title = Leírás (alternatív szöveg)
+pdfjs-editor-add-signature-description-default-when-drawing = Aláírás
+pdfjs-editor-add-signature-clear-button-label = Aláírás törlése
+pdfjs-editor-add-signature-clear-button =
+    .title = Aláírás törlése
+pdfjs-editor-add-signature-save-checkbox = Aláírás mentése
+pdfjs-editor-add-signature-save-warning-message = Elérte a mentett aláírások 5 darabos korlátját. A mentéshez távolítson el egyet.
+pdfjs-editor-add-signature-image-upload-error-title = A kép nem tölthető fel
+pdfjs-editor-add-signature-image-upload-error-description = Ellenőrizze a hálózati kapcsolatot, vagy próbálkozzon egy másik képpel.
+pdfjs-editor-add-signature-error-close-button = Bezárás
+
+## Dialog buttons
+
+pdfjs-editor-add-signature-cancel-button = Mégse
+pdfjs-editor-add-signature-add-button = Hozzáadás
+pdfjs-editor-edit-signature-update-button = Frissítés
+
+## Main menu for adding/removing signatures
+
+pdfjs-editor-delete-signature-button =
+    .title = Aláírás eltávolítása
+pdfjs-editor-delete-signature-button-label = Aláírás eltávolítása
+
+## Editor toolbar
+
+pdfjs-editor-add-signature-edit-button-label = Leírás szerkesztése
+
+## Edit signature description dialog
+
+pdfjs-editor-edit-signature-dialog-title = Leírás szerkesztése

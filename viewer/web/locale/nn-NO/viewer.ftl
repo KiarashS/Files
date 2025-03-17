@@ -105,6 +105,14 @@ pdfjs-document-properties-button-label = Dokumenteigenskapar…
 pdfjs-document-properties-file-name = Filnamn:
 pdfjs-document-properties-file-size = Filstorleik:
 # Variables:
+#   $kb (Number) - the PDF file size in kilobytes
+#   $b (Number) - the PDF file size in bytes
+pdfjs-document-properties-size-kb = { NUMBER($kb, maximumSignificantDigits: 3) } kB ({ $b } byte)
+# Variables:
+#   $mb (Number) - the PDF file size in megabytes
+#   $b (Number) - the PDF file size in bytes
+pdfjs-document-properties-size-mb = { NUMBER($mb, maximumSignificantDigits: 3) } MB ({ $b } byte)
+# Variables:
 #   $size_kb (Number) - the PDF file size in kilobytes
 #   $size_b (Number) - the PDF file size in bytes
 pdfjs-document-properties-kb = { $size_kb } KB ({ $size_b } bytes)
@@ -118,6 +126,9 @@ pdfjs-document-properties-subject = Emne:
 pdfjs-document-properties-keywords = Stikkord:
 pdfjs-document-properties-creation-date = Dato oppretta:
 pdfjs-document-properties-modification-date = Dato endra:
+# Variables:
+#   $dateObj (Date) - the creation/modification date and time of the PDF file
+pdfjs-document-properties-date-time-string = { DATETIME($dateObj, dateStyle: "short", timeStyle: "medium") }
 # Variables:
 #   $date (Date) - the creation/modification date of the PDF file
 #   $time (Time) - the creation/modification time of the PDF file
@@ -275,6 +286,9 @@ pdfjs-annotation-date-string = { $date } { $time }
 # Some common types are e.g.: "Check", "Text", "Comment", "Note"
 pdfjs-text-annotation-type =
     .alt = [{ $type } annotasjon]
+# Variables:
+#   $dateObj (Date) - the modification date and time of the annotation
+pdfjs-annotation-date-time-string = { DATETIME($dateObj, dateStyle: "short", timeStyle: "medium") }
 
 ## Password
 
@@ -320,15 +334,19 @@ pdfjs-editor-remove-highlight-button =
 pdfjs-editor-free-text-color-input = Farge
 pdfjs-editor-free-text-size-input = Storleik
 pdfjs-editor-ink-color-input = Farge
-pdfjs-editor-ink-thickness-input = Tjukkleik
+pdfjs-editor-ink-thickness-input = Tjukn
 pdfjs-editor-ink-opacity-input = Ugjennomskinleg
 pdfjs-editor-stamp-add-image-button =
     .title = Legg til bilde
 pdfjs-editor-stamp-add-image-button-label = Legg til bilde
 # This refers to the thickness of the line used for free highlighting (not bound to text)
-pdfjs-editor-free-highlight-thickness-input = Tjukkleik
+pdfjs-editor-free-highlight-thickness-input = Tjukn
 pdfjs-editor-free-highlight-thickness-title =
     .title = Endre tjukn når du markerer andre element enn tekst
+# .default-content is used as a placeholder in an empty text editor.
+pdfjs-free-text2 =
+    .aria-label = Tekstredigering
+    .default-content = Begynn å skrive…
 pdfjs-free-text =
     .aria-label = Tekstredigering
 pdfjs-free-text-default-content = Byrje å skrive…
@@ -339,8 +357,9 @@ pdfjs-ink-canvas =
 
 ## Alt-text dialog
 
-# Alternative text (alt text) helps when people can't see the image.
 pdfjs-editor-alt-text-button-label = Alt-tekst
+pdfjs-editor-alt-text-edit-button =
+    .aria-label = Rediger alt-tekst tekst
 pdfjs-editor-alt-text-edit-button-label = Rediger alt-tekst tekst
 pdfjs-editor-alt-text-dialog-label = Vel eit alternativ
 pdfjs-editor-alt-text-dialog-description = Alt-tekst (alternativ tekst) hjelper når folk ikkje kan sjå bildet eller når det ikkje vert lasta inn.
@@ -354,6 +373,9 @@ pdfjs-editor-alt-text-decorative-tooltip = Merkt som dekorativ
 # .placeholder: This is a placeholder for the alt text input area
 pdfjs-editor-alt-text-textarea =
     .placeholder = Til dømes, «Ein ung mann set seg ved eit bord for å ete eit måltid»
+# Alternative text (alt text) helps when people can't see the image.
+pdfjs-editor-alt-text-button =
+    .aria-label = Alt-tekst
 
 ## Editor resizers
 ## This is used in an aria label to help to understand the role of the resizer.
@@ -366,6 +388,22 @@ pdfjs-editor-resizer-label-bottom-right = Nedste høgre hjørne – endre størr
 pdfjs-editor-resizer-label-bottom-middle = Nedst i midten — endre størrelse
 pdfjs-editor-resizer-label-bottom-left = Nedste venstre hjørne – endre størrelse
 pdfjs-editor-resizer-label-middle-left = Midt til venstre — endre størrelse
+pdfjs-editor-resizer-top-left =
+    .aria-label = Øvste venstre hjørne – endre størrelse
+pdfjs-editor-resizer-top-middle =
+    .aria-label = Øvst i midten — endre størrelse
+pdfjs-editor-resizer-top-right =
+    .aria-label = Øvste høgre hjørne – endre størrelse
+pdfjs-editor-resizer-middle-right =
+    .aria-label = Midt til høgre – endre størrelse
+pdfjs-editor-resizer-bottom-right =
+    .aria-label = Nedste høgre hjørne – endre størrelse
+pdfjs-editor-resizer-bottom-middle =
+    .aria-label = Nedst i midten — endre størrelse
+pdfjs-editor-resizer-bottom-left =
+    .aria-label = Nedste venstre hjørne – endre størrelse
+pdfjs-editor-resizer-middle-left =
+    .aria-label = Midt til venstre — endre størrelse
 
 ## Color picker
 
@@ -419,10 +457,16 @@ pdfjs-editor-new-alt-text-error-close-button = Lat att
 pdfjs-editor-new-alt-text-ai-model-downloading-progress = Lastar ned AI-modell med alternativ tekst ({ $downloadedSize } av { $totalSize } MB)
     .aria-valuetext = Lastar ned AI-modell med alternativ tekst ({ $downloadedSize } av { $totalSize } MB)
 # This is a button that users can click to edit the alt text they have already added.
+pdfjs-editor-new-alt-text-added-button =
+    .aria-label = Alternativ tekst lagt til
 pdfjs-editor-new-alt-text-added-button-label = Alternativ tekst lagt til
 # This is a button that users can click to open the alt text editor and add alt text when it is not present.
+pdfjs-editor-new-alt-text-missing-button =
+    .aria-label = Manglande alternativ tekst
 pdfjs-editor-new-alt-text-missing-button-label = Manglande alternativ tekst
 # This is a button that opens up the alt text modal where users should review the alt text that was automatically generated.
+pdfjs-editor-new-alt-text-to-review-button =
+    .aria-label = Vurder alternativ tekst
 pdfjs-editor-new-alt-text-to-review-button-label = Vurder alternativ tekst
 # "Created automatically" is a prefix that will be added to the beginning of any alt text that has been automatically generated. After the colon, the user will see/hear the actual alt text description. If the alt text has been edited by a human, this prefix will not appear.
 # Variables:
@@ -437,6 +481,7 @@ pdfjs-image-alt-text-settings-button-label = Alternative tekst-innstillingar for
 pdfjs-editor-alt-text-settings-dialog-label = Alternative tekst-innstillingar for bilde
 pdfjs-editor-alt-text-settings-automatic-title = Automatisk alternativ tekst
 pdfjs-editor-alt-text-settings-create-model-button-label = Opprett alternativ tekt automatisk
+pdfjs-editor-alt-text-settings-create-model-description = Foreslår skildringar for å hjelpe folk som ikkje kan sjå bildet eller når bildet ikkje blir lasta inn.
 # Variables:
 #   $totalSize (Number) - the total size (in MB) of the AI model.
 pdfjs-editor-alt-text-settings-download-model-label = AI-modell for alternativ tekst ({ $totalSize } MB)
@@ -446,4 +491,47 @@ pdfjs-editor-alt-text-settings-download-model-button = Last ned
 pdfjs-editor-alt-text-settings-downloading-model-button = Lastar ned…
 pdfjs-editor-alt-text-settings-editor-title = Alternativ tekst-redigerar
 pdfjs-editor-alt-text-settings-show-dialog-button-label = Vis alternativ tekst-redigerar direkte når du legg til eit bilde
+pdfjs-editor-alt-text-settings-show-dialog-description = Hjelper deg med å sørgje for at alle bilda dine har alternativ tekst.
 pdfjs-editor-alt-text-settings-close-button = Lat att
+
+## "Annotations removed" bar
+
+pdfjs-editor-undo-bar-message-freetext = Tekst fjerna
+pdfjs-editor-undo-bar-message-ink = Teikning fjerna
+pdfjs-editor-undo-bar-message-stamp = Bilde fjerna
+pdfjs-editor-undo-bar-undo-button =
+    .title = Angre
+pdfjs-editor-undo-bar-undo-button-label = Angre
+pdfjs-editor-undo-bar-close-button =
+    .title = Lat att
+pdfjs-editor-undo-bar-close-button-label = Lat att
+
+## Add a signature dialog
+
+
+## Tab names
+
+
+## Tab panels
+
+pdfjs-editor-add-signature-draw-thickness-range-label = Tjukn
+
+## Controls
+
+pdfjs-editor-add-signature-image-upload-error-title = Klarte ikkje å oppdatere bilde
+pdfjs-editor-add-signature-error-close-button = Lat att
+
+## Dialog buttons
+
+pdfjs-editor-add-signature-cancel-button = Avbryt
+pdfjs-editor-add-signature-add-button = Legg til
+pdfjs-editor-edit-signature-update-button = Oppdater
+
+## Main menu for adding/removing signatures
+
+
+## Editor toolbar
+
+
+## Edit signature description dialog
+

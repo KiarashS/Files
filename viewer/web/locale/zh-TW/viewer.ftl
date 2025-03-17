@@ -173,8 +173,8 @@ pdfjs-print-progress-message = 正在準備列印文件…
 #   $progress (Number) - percent value
 pdfjs-print-progress-percent = { $progress }%
 pdfjs-print-progress-close-button = 取消
-pdfjs-printing-not-supported = 警告: 此瀏覽器未完整支援列印功能。
-pdfjs-printing-not-ready = 警告: 此 PDF 未完成下載以供列印。
+pdfjs-printing-not-supported = 警告：此瀏覽器未完整支援列印功能。
+pdfjs-printing-not-ready = 警告：此 PDF 未完成下載以供列印。
 
 ## Tooltips and alt text for side panel toolbar buttons
 
@@ -308,6 +308,9 @@ pdfjs-highlight-floating-button1 =
     .title = 強調
     .aria-label = 強調
 pdfjs-highlight-floating-button-label = 強調
+pdfjs-editor-signature-button =
+    .title = 加入簽名
+pdfjs-editor-signature-button-label = 加入簽名
 
 ## Remove button for the various kind of editor.
 
@@ -319,6 +322,8 @@ pdfjs-editor-remove-stamp-button =
     .title = 移除圖片
 pdfjs-editor-remove-highlight-button =
     .title = 移除強調範圍
+pdfjs-editor-remove-signature-button =
+    .title = 移除簽章
 
 ##
 
@@ -335,6 +340,13 @@ pdfjs-editor-stamp-add-image-button-label = 新增圖片
 pdfjs-editor-free-highlight-thickness-input = 線條粗細
 pdfjs-editor-free-highlight-thickness-title =
     .title = 更改強調文字以外的項目時的線條粗細
+pdfjs-editor-signature-add-signature-button =
+    .title = 新增簽名
+pdfjs-editor-signature-add-signature-button-label = 新增簽章
+# .default-content is used as a placeholder in an empty text editor.
+pdfjs-free-text2 =
+    .aria-label = 文字編輯器
+    .default-content = 請打字…
 pdfjs-free-text =
     .aria-label = 文本編輯器
 pdfjs-free-text-default-content = 在此打字…
@@ -345,8 +357,9 @@ pdfjs-ink-canvas =
 
 ## Alt-text dialog
 
-# Alternative text (alt text) helps when people can't see the image.
 pdfjs-editor-alt-text-button-label = 替代文字
+pdfjs-editor-alt-text-edit-button =
+    .aria-label = 編輯替代文字
 pdfjs-editor-alt-text-edit-button-label = 編輯替代文字
 pdfjs-editor-alt-text-dialog-label = 挑選一種
 pdfjs-editor-alt-text-dialog-description = 替代文字可協助盲人，或於圖片無法載入時提供說明。
@@ -360,6 +373,9 @@ pdfjs-editor-alt-text-decorative-tooltip = 已標示為裝飾性內容
 # .placeholder: This is a placeholder for the alt text input area
 pdfjs-editor-alt-text-textarea =
     .placeholder = 例如：「有一位年輕男人坐在桌子前面吃飯」
+# Alternative text (alt text) helps when people can't see the image.
+pdfjs-editor-alt-text-button =
+    .aria-label = 替代文字
 
 ## Editor resizers
 ## This is used in an aria label to help to understand the role of the resizer.
@@ -372,6 +388,22 @@ pdfjs-editor-resizer-label-bottom-right = 右下角 — 調整大小
 pdfjs-editor-resizer-label-bottom-middle = 底部中間 — 調整大小
 pdfjs-editor-resizer-label-bottom-left = 左下角 — 調整大小
 pdfjs-editor-resizer-label-middle-left = 中間左方 — 調整大小
+pdfjs-editor-resizer-top-left =
+    .aria-label = 左上角 — 調整大小
+pdfjs-editor-resizer-top-middle =
+    .aria-label = 頂部中間 — 調整大小
+pdfjs-editor-resizer-top-right =
+    .aria-label = 右上角 — 調整大小
+pdfjs-editor-resizer-middle-right =
+    .aria-label = 中間右方 — 調整大小
+pdfjs-editor-resizer-bottom-right =
+    .aria-label = 右下角 — 調整大小
+pdfjs-editor-resizer-bottom-middle =
+    .aria-label = 底部中間 — 調整大小
+pdfjs-editor-resizer-bottom-left =
+    .aria-label = 左下角 — 調整大小
+pdfjs-editor-resizer-middle-left =
+    .aria-label = 中間左方 — 調整大小
 
 ## Color picker
 
@@ -425,10 +457,16 @@ pdfjs-editor-new-alt-text-error-close-button = 關閉
 pdfjs-editor-new-alt-text-ai-model-downloading-progress = 正在下載替代文字 AI 模型（{ $downloadedSize } / { $totalSize } MB）
     .aria-valuetext = 正在下載替代文字 AI 模型（{ $downloadedSize } / { $totalSize } MB）
 # This is a button that users can click to edit the alt text they have already added.
+pdfjs-editor-new-alt-text-added-button =
+    .aria-label = 已新增替代文字
 pdfjs-editor-new-alt-text-added-button-label = 已新增替代文字
 # This is a button that users can click to open the alt text editor and add alt text when it is not present.
+pdfjs-editor-new-alt-text-missing-button =
+    .aria-label = 缺少替代文字
 pdfjs-editor-new-alt-text-missing-button-label = 缺少替代文字
 # This is a button that opens up the alt text modal where users should review the alt text that was automatically generated.
+pdfjs-editor-new-alt-text-to-review-button =
+    .aria-label = 確認替代文字
 pdfjs-editor-new-alt-text-to-review-button-label = 確認替代文字
 # "Created automatically" is a prefix that will be added to the beginning of any alt text that has been automatically generated. After the colon, the user will see/hear the actual alt text description. If the alt text has been edited by a human, this prefix will not appear.
 # Variables:
@@ -455,3 +493,89 @@ pdfjs-editor-alt-text-settings-editor-title = 替代文字編輯器
 pdfjs-editor-alt-text-settings-show-dialog-button-label = 新增圖片後立即顯示替代文字編輯器
 pdfjs-editor-alt-text-settings-show-dialog-description = 幫助您確保所有圖片都有替代文字。
 pdfjs-editor-alt-text-settings-close-button = 關閉
+
+## "Annotations removed" bar
+
+pdfjs-editor-undo-bar-message-highlight = 已移除強調
+pdfjs-editor-undo-bar-message-freetext = 已移除文字
+pdfjs-editor-undo-bar-message-ink = 已移除繪圖
+pdfjs-editor-undo-bar-message-stamp = 已移除圖片
+pdfjs-editor-undo-bar-message-signature = 已移除簽章
+# Variables:
+#   $count (Number) - the number of removed annotations.
+pdfjs-editor-undo-bar-message-multiple = 已移除 { $count } 筆註解
+pdfjs-editor-undo-bar-undo-button =
+    .title = 還原
+pdfjs-editor-undo-bar-undo-button-label = 還原
+pdfjs-editor-undo-bar-close-button =
+    .title = 關閉
+pdfjs-editor-undo-bar-close-button-label = 關閉
+
+## Add a signature dialog
+
+pdfjs-editor-add-signature-dialog-label = 此對話框讓使用者能夠建立簽章以加入 PDF 文件。使用者可以編輯他們的姓名（同時也是替代文字），並選擇性儲存簽章，以供未來重複使用。
+pdfjs-editor-add-signature-dialog-title = 加入簽章
+
+## Tab names
+
+# Type is a verb (you can type your name as signature)
+pdfjs-editor-add-signature-type-button = 打字
+    .title = 打字
+# Draw is a verb (you can draw your signature)
+pdfjs-editor-add-signature-draw-button = 手繪
+    .title = 手繪
+pdfjs-editor-add-signature-image-button = 圖片
+    .title = 圖片
+
+## Tab panels
+
+pdfjs-editor-add-signature-type-input =
+    .aria-label = 輸入簽章
+    .placeholder = 輸入簽章
+pdfjs-editor-add-signature-draw-placeholder = 手繪簽章
+pdfjs-editor-add-signature-draw-thickness-range-label = 線條粗細
+# Variables:
+#   $thickness (Number) - the thickness (in pixels) of the line used to draw a signature.
+pdfjs-editor-add-signature-draw-thickness-range =
+    .title = 繪製時的線條粗細：{ $thickness }
+pdfjs-editor-add-signature-image-placeholder = 將檔案拖曳到此處即可上傳
+pdfjs-editor-add-signature-image-browse-link =
+    { PLATFORM() ->
+        [macos] 或選擇圖片檔案
+       *[other] 或瀏覽圖片檔案
+    }
+
+## Controls
+
+pdfjs-editor-add-signature-description-label = 描述（替代文字）
+pdfjs-editor-add-signature-description-input =
+    .title = 描述（替代文字）
+pdfjs-editor-add-signature-description-default-when-drawing = 簽章
+pdfjs-editor-add-signature-clear-button-label = 清除簽章
+pdfjs-editor-add-signature-clear-button =
+    .title = 清除簽章
+pdfjs-editor-add-signature-save-checkbox = 儲存簽章
+pdfjs-editor-add-signature-save-warning-message = 您已經儲存 5 式簽章，請移除任一式才能再新增。
+pdfjs-editor-add-signature-image-upload-error-title = 無法上傳圖片
+pdfjs-editor-add-signature-image-upload-error-description = 請檢查您的網路連線，或改用其他圖片。
+pdfjs-editor-add-signature-error-close-button = 關閉
+
+## Dialog buttons
+
+pdfjs-editor-add-signature-cancel-button = 取消
+pdfjs-editor-add-signature-add-button = 新增
+pdfjs-editor-edit-signature-update-button = 更新
+
+## Main menu for adding/removing signatures
+
+pdfjs-editor-delete-signature-button =
+    .title = 移除簽章
+pdfjs-editor-delete-signature-button-label = 移除簽章
+
+## Editor toolbar
+
+pdfjs-editor-add-signature-edit-button-label = 編輯描述
+
+## Edit signature description dialog
+
+pdfjs-editor-edit-signature-dialog-title = 編輯描述
