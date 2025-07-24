@@ -37,6 +37,7 @@ See https://github.com/adobe-type-tools/cmap-resources
   </head>
 
   <body tabindex="0">
+    <span id="viewer-alert" class="visuallyHidden" role="alert"></span>
     <div id="outerContainer">
 
       <div id="sidebarContainer">
@@ -648,16 +649,16 @@ See https://github.com/adobe-type-tools/cmap-resources
               <div id="addSignatureControls">
                 <div id="horizontalContainer">
                   <div id="addSignatureDescriptionContainer">
-                    <label for="addSignatureDescription" data-l10n-id="pdfjs-editor-add-signature-description-label"></span></label>
+                    <label for="addSignatureDescInput" data-l10n-id="pdfjs-editor-add-signature-description-label"></label>
                     <span id="addSignatureDescription" class="inputWithClearButton">
-                      <input type="text" data-l10n-id="pdfjs-editor-add-signature-description-input" tabindex="0"></input>
+                      <input id="addSignatureDescInput" type="text" data-l10n-id="pdfjs-editor-add-signature-description-input" tabindex="0"></input>
                       <button class="clearInputButton" type="button" tabindex="0" aria-hidden="true"></button>
                     </span>
                   </div>
                   <button id="clearSignatureButton" type="button" data-l10n-id="pdfjs-editor-add-signature-clear-button" tabindex="0"><span data-l10n-id="pdfjs-editor-add-signature-clear-button-label"></span></button>
                 </div>
                 <div id="addSignatureSaveContainer">
-                  <input type="checkbox" id="addSignatureSaveCheckbox" checked="true"></input>
+                  <input type="checkbox" id="addSignatureSaveCheckbox"></input>
                   <label for="addSignatureSaveCheckbox" data-l10n-id="pdfjs-editor-add-signature-save-checkbox"></label>
                   <span></span>
                   <span id="addSignatureSaveWarning" data-l10n-id="pdfjs-editor-add-signature-save-warning-message"></span>
@@ -687,9 +688,9 @@ See https://github.com/adobe-type-tools/cmap-resources
           </div>
           <div id="editSignatureDescriptionAndView">
             <div id="editSignatureDescriptionContainer">
-              <label for="editSignatureDescription" data-l10n-id="pdfjs-editor-add-signature-description-label"></span></label>
+              <label for="editSignatureDescInput" data-l10n-id="pdfjs-editor-add-signature-description-label"></label>
               <span id="editSignatureDescription" class="inputWithClearButton">
-                <input type="text" data-l10n-id="pdfjs-editor-add-signature-description-input" tabindex="0"></input>
+                <input id="editSignatureDescInput" type="text" data-l10n-id="pdfjs-editor-add-signature-description-input" tabindex="0"></input>
                 <button class="clearInputButton" type="button" tabindex="0" aria-hidden="true"></button>
               </span>
             </div>
